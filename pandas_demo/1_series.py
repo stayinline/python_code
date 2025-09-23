@@ -55,7 +55,7 @@ print("############")
 s = pd.Series(np.random.randn(5), index=["a", "b", "c", "d", "e"])
 print(s)
 
-print(s.iloc[0])  # index获取
+print(s.iloc[0])  # index获取,通过iloc获取第一个元素
 print(s.iloc[:3])  # 数组的类似操作
 print(s[s > s.median()])  # 条件判断
 print(s.iloc[[4, 3, 1]])  # 乱序指定 index
