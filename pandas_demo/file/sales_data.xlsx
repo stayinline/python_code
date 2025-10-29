@@ -1,0 +1,401 @@
+order_id,order_date,product_category,product_name,region,country,quantity,sales,discount,profit,customer_id
+ORD1000,2024-10-16,Office Supplies,Stapler,Central,United States,5,5984.25,0.05,1698.97,CUST120
+ORD1001,2023-09-08,Office Supplies,Paper Ream,West,United States,5,3371.45,0.05,633.07,CUST199
+ORD1002,2024-11-23,Furniture,Sofa,West,United States,1,40.67,0,10.84,CUST129
+ORD1003,2024-08-27,Technology,Laptop,West,United States,4,44.64,0.1,4.69,CUST175
+ORD1004,2023-04-06,Office Supplies,Paper Ream,West,United States,1,791.89,0.1,45.07,CUST190
+ORD1005,2024-07-28,Office Supplies,Labels,South,United States,1,605.79,0.1,207.26,CUST114
+ORD1006,2023-08-14,Technology,Keyboard,Central,United States,4,580.01,0.05,95.55,CUST163
+ORD1007,2023-01-07,Office Supplies,Desk Organizer,Central,United States,1,79.21,0.05,20.13,CUST172
+ORD1008,2023-10-12,Office Supplies,Paper Ream,Central,United States,5,148.82,0,50.55,CUST108
+ORD1009,2023-04-15,Office Supplies,Desk Organizer,West,United States,1,155.53,0.1,19.02,CUST159
+ORD1010,2024-01-03,Technology,Keyboard,Central,United States,5,4594.48,0.05,1483.08,CUST135
+ORD1011,2023-02-14,Furniture,Filing Cabinet,West,United States,1,997.16,0,177.04,CUST153
+ORD1012,2024-01-23,Office Supplies,Labels,Central,United States,1,855.87,0.15,291.75,CUST189
+ORD1013,2024-10-05,Furniture,Bookcase,East,United States,2,2819.71,0.1,646.76,CUST147
+ORD1014,2024-12-22,Office Supplies,Stapler,East,United States,5,709.27,0.1,45.09,CUST139
+ORD1015,2023-10-24,Office Supplies,Paper Ream,West,United States,3,1767.39,0,374.52,CUST123
+ORD1016,2024-01-25,Technology,Mouse,Central,United States,1,1448.23,0.1,308.2,CUST140
+ORD1017,2023-06-16,Technology,Monitor,East,United States,3,3615.82,0,197.75,CUST108
+ORD1018,2024-11-17,Technology,Laptop,East,United States,1,306.09,0.05,33.56,CUST107
+ORD1019,2024-06-30,Furniture,Table,East,United States,1,1187.36,0.05,85.74,CUST140
+ORD1020,2024-04-18,Technology,Monitor,East,United States,2,2592.05,0.1,386.91,CUST147
+ORD1021,2024-12-02,Technology,Laptop,East,United States,5,2366.82,0.15,636.39,CUST185
+ORD1022,2023-02-02,Technology,Mouse,Central,United States,1,846.25,0.05,72.67,CUST177
+ORD1023,2023-03-09,Office Supplies,Labels,Central,United States,1,1143.57,0,138.14,CUST113
+ORD1024,2023-08-06,Furniture,Filing Cabinet,South,United States,5,351.23,0,20.24,CUST176
+ORD1025,2024-10-20,Technology,Printer,Central,United States,1,56.83,0,8.2,CUST195
+ORD1026,2023-05-23,Office Supplies,Labels,Central,United States,2,2724.55,0.15,577.47,CUST128
+ORD1027,2024-08-21,Technology,Keyboard,South,United States,2,2829.7,0.05,731.29,CUST127
+ORD1028,2024-01-06,Office Supplies,Paper Ream,South,United States,1,940.29,0,76.77,CUST127
+ORD1029,2023-04-04,Office Supplies,Stapler,East,United States,2,670.95,0.1,213.21,CUST174
+ORD1030,2024-10-04,Office Supplies,Desk Organizer,West,United States,1,191.91,0,27.9,CUST196
+ORD1031,2024-01-30,Technology,Keyboard,South,United States,1,349.62,0,103.28,CUST102
+ORD1032,2024-06-25,Technology,Keyboard,West,United States,5,1276.69,0.05,223.71,CUST136
+ORD1033,2024-11-27,Furniture,Chair,Central,United States,1,188.6,0.1,23.24,CUST158
+ORD1034,2024-10-18,Technology,Laptop,Central,United States,4,1343.83,0,230,CUST161
+ORD1035,2024-03-21,Office Supplies,Desk Organizer,West,United States,1,388.33,0.1,48.75,CUST101
+ORD1036,2023-09-27,Furniture,Table,West,United States,1,458.31,0,160.1,CUST158
+ORD1037,2024-10-02,Technology,Keyboard,East,United States,1,1465.16,0.1,95.89,CUST195
+ORD1038,2023-06-06,Technology,Printer,West,United States,1,955.18,0,199.9,CUST189
+ORD1039,2024-09-05,Technology,Mouse,West,United States,4,1482.65,0.1,110.1,CUST155
+ORD1040,2023-04-25,Technology,Monitor,East,United States,1,370.82,0.15,88.88,CUST169
+ORD1041,2023-03-01,Office Supplies,Labels,West,United States,4,3233.22,0,307.85,CUST158
+ORD1042,2023-03-29,Furniture,Filing Cabinet,West,United States,4,4187.04,0.05,951.58,CUST158
+ORD1043,2024-06-29,Office Supplies,Paper Ream,South,United States,2,69.43,0.05,20.33,CUST119
+ORD1044,2024-07-16,Office Supplies,Pen Set,South,United States,5,1349.03,0,228.35,CUST138
+ORD1045,2023-08-05,Furniture,Table,Central,United States,1,1258.19,0.05,191.65,CUST188
+ORD1046,2024-02-13,Furniture,Bookcase,South,United States,1,1387.79,0,176.78,CUST115
+ORD1047,2024-06-13,Technology,Laptop,East,United States,1,1473.43,0.1,307.79,CUST101
+ORD1048,2023-08-19,Office Supplies,Pen Set,West,United States,1,148.72,0.1,32.34,CUST131
+ORD1049,2024-08-25,Furniture,Table,East,United States,1,291.17,0,45.06,CUST147
+ORD1050,2023-01-08,Office Supplies,Stapler,East,United States,1,1285.92,0,311.98,CUST174
+ORD1051,2023-03-11,Office Supplies,Pen Set,West,United States,1,250.83,0.1,56.24,CUST188
+ORD1052,2024-06-10,Office Supplies,Pen Set,South,United States,1,1460.76,0,143.51,CUST181
+ORD1053,2023-08-08,Furniture,Table,South,United States,1,1040.92,0.15,122.08,CUST132
+ORD1054,2023-09-06,Technology,Mouse,East,United States,2,727,0.15,75.35,CUST107
+ORD1055,2023-04-07,Office Supplies,Desk Organizer,Central,United States,5,5421,0,1153.38,CUST158
+ORD1056,2024-03-09,Technology,Mouse,West,United States,1,958.14,0.15,187.82,CUST107
+ORD1057,2024-11-20,Furniture,Chair,West,United States,1,657.25,0.15,131.97,CUST127
+ORD1058,2024-02-17,Furniture,Bookcase,West,United States,5,3719.26,0.15,442.8,CUST147
+ORD1059,2023-09-12,Office Supplies,Paper Ream,South,United States,1,862.29,0,54.39,CUST143
+ORD1060,2023-05-24,Technology,Printer,Central,United States,2,1420.43,0.15,447.5,CUST136
+ORD1061,2024-04-18,Office Supplies,Stapler,South,United States,3,1943.98,0.15,430.96,CUST159
+ORD1062,2024-07-17,Office Supplies,Stapler,West,United States,1,122.27,0.15,20.24,CUST186
+ORD1063,2023-04-06,Office Supplies,Paper Ream,South,United States,1,482.21,0,104.66,CUST194
+ORD1064,2024-05-12,Technology,Printer,South,United States,4,4188.34,0,982.17,CUST185
+ORD1065,2023-03-02,Office Supplies,Desk Organizer,West,United States,5,1093.63,0.05,151.56,CUST189
+ORD1066,2024-02-04,Technology,Mouse,Central,United States,1,1274.52,0,332.33,CUST147
+ORD1067,2024-03-09,Furniture,Sofa,South,United States,5,2237.26,0,655.59,CUST124
+ORD1068,2023-06-08,Office Supplies,Pen Set,East,United States,3,394.73,0,94.09,CUST119
+ORD1069,2023-03-01,Furniture,Sofa,West,United States,1,115.7,0.1,36.56,CUST114
+ORD1070,2023-11-18,Office Supplies,Stapler,South,United States,2,1745.02,0.05,330.99,CUST162
+ORD1071,2024-05-29,Furniture,Table,West,United States,4,1747.79,0,538.53,CUST148
+ORD1072,2024-06-04,Office Supplies,Paper Ream,West,United States,2,135.73,0.05,11.96,CUST196
+ORD1073,2024-09-01,Office Supplies,Paper Ream,South,United States,3,1243.8,0.1,294.62,CUST167
+ORD1074,2023-05-03,Furniture,Table,West,United States,4,348.02,0.1,60.35,CUST198
+ORD1075,2024-09-26,Office Supplies,Desk Organizer,Central,United States,5,1080.73,0.15,368.38,CUST129
+ORD1076,2023-09-25,Office Supplies,Pen Set,East,United States,1,1194.83,0.05,217.09,CUST154
+ORD1077,2023-09-29,Technology,Printer,Central,United States,1,47.77,0.15,3.55,CUST108
+ORD1078,2024-04-13,Technology,Laptop,West,United States,2,1238.68,0,402.03,CUST133
+ORD1079,2024-04-14,Furniture,Sofa,West,United States,4,599.48,0,148.71,CUST100
+ORD1080,2023-03-17,Furniture,Table,Central,United States,3,3328.4,0.15,777.24,CUST166
+ORD1081,2023-05-16,Technology,Laptop,East,United States,2,1706.79,0.05,473.38,CUST156
+ORD1082,2024-01-14,Technology,Printer,South,United States,3,548.84,0.15,42.95,CUST193
+ORD1083,2024-07-10,Furniture,Bookcase,West,United States,4,5877.88,0.15,1130.04,CUST189
+ORD1084,2024-11-14,Furniture,Bookcase,West,United States,1,742.51,0.1,75.71,CUST193
+ORD1085,2023-05-18,Technology,Laptop,West,United States,3,1811.32,0,606.33,CUST199
+ORD1086,2024-07-20,Office Supplies,Pen Set,Central,United States,1,398.73,0,94.8,CUST157
+ORD1087,2024-09-11,Office Supplies,Pen Set,East,United States,1,813.67,0.15,80.46,CUST123
+ORD1088,2024-12-04,Furniture,Bookcase,South,United States,5,7084.67,0.1,1599.24,CUST190
+ORD1089,2023-09-15,Office Supplies,Stapler,South,United States,2,1734.91,0,385.17,CUST132
+ORD1090,2023-10-11,Office Supplies,Stapler,Central,United States,1,1218.69,0.05,405.14,CUST166
+ORD1091,2023-05-14,Furniture,Bookcase,East,United States,1,1442.17,0,161.53,CUST128
+ORD1092,2024-03-28,Furniture,Filing Cabinet,West,United States,3,989.21,0,61.02,CUST134
+ORD1093,2023-04-25,Office Supplies,Paper Ream,West,United States,5,580.36,0.15,176.12,CUST189
+ORD1094,2024-01-14,Furniture,Sofa,East,United States,4,4894.23,0,973.03,CUST157
+ORD1095,2024-03-16,Office Supplies,Stapler,Central,United States,3,1587.06,0.05,497.13,CUST135
+ORD1096,2024-01-09,Office Supplies,Pen Set,East,United States,1,1207.19,0,258.81,CUST172
+ORD1097,2024-11-29,Office Supplies,Stapler,Central,United States,1,1485.85,0.1,240.12,CUST195
+ORD1098,2024-07-27,Technology,Keyboard,East,United States,5,6984.14,0.15,849.13,CUST154
+ORD1099,2023-08-31,Office Supplies,Paper Ream,South,United States,3,3337.39,0.05,270.12,CUST116
+ORD1100,2023-01-26,Office Supplies,Pen Set,South,United States,1,762.83,0,111.38,CUST158
+ORD1101,2024-11-16,Furniture,Table,Central,United States,1,589.91,0.1,199.13,CUST118
+ORD1102,2023-06-13,Furniture,Chair,South,United States,2,1077.62,0.1,361.02,CUST151
+ORD1103,2023-02-09,Technology,Printer,East,United States,1,744.61,0.15,57.72,CUST111
+ORD1104,2024-04-16,Technology,Monitor,East,United States,1,835.02,0.15,230.23,CUST122
+ORD1105,2023-08-17,Office Supplies,Paper Ream,South,United States,1,179.06,0.15,35.51,CUST138
+ORD1106,2023-12-03,Technology,Laptop,Central,United States,4,3315.19,0.15,898.78,CUST192
+ORD1107,2023-12-26,Furniture,Sofa,South,United States,1,1061.69,0.1,272.23,CUST157
+ORD1108,2024-11-26,Furniture,Bookcase,West,United States,2,2603.27,0.15,303.99,CUST108
+ORD1109,2023-04-29,Technology,Printer,Central,United States,1,1338.93,0,99.62,CUST136
+ORD1110,2023-02-09,Office Supplies,Labels,South,United States,4,5920.37,0.15,954.32,CUST116
+ORD1111,2023-12-20,Furniture,Bookcase,South,United States,5,6812.32,0.15,1880.29,CUST169
+ORD1112,2024-09-12,Furniture,Chair,South,United States,2,268.83,0.15,43.93,CUST138
+ORD1113,2024-08-13,Office Supplies,Pen Set,West,United States,1,380.6,0.05,31.73,CUST166
+ORD1114,2024-12-26,Technology,Laptop,East,United States,3,80.75,0.1,17.88,CUST119
+ORD1115,2024-01-08,Technology,Laptop,Central,United States,2,2306.24,0,630.21,CUST102
+ORD1116,2024-09-30,Technology,Laptop,Central,United States,3,1091.65,0,177.35,CUST124
+ORD1117,2024-06-03,Technology,Mouse,Central,United States,1,343.16,0,18.41,CUST131
+ORD1118,2024-02-17,Furniture,Bookcase,East,United States,3,222.92,0.15,14.05,CUST184
+ORD1119,2023-07-16,Technology,Mouse,East,United States,1,1379.48,0.1,298.18,CUST119
+ORD1120,2024-09-22,Furniture,Bookcase,South,United States,1,789.42,0,90.82,CUST114
+ORD1121,2024-07-15,Office Supplies,Pen Set,Central,United States,5,7468.94,0.05,2392.66,CUST156
+ORD1122,2023-08-04,Technology,Keyboard,Central,United States,1,428.64,0.1,35.16,CUST107
+ORD1123,2024-04-21,Technology,Mouse,East,United States,1,290.3,0,48.33,CUST159
+ORD1124,2024-06-07,Technology,Printer,West,United States,1,406.25,0.15,139.07,CUST163
+ORD1125,2023-10-18,Furniture,Sofa,Central,United States,1,1050.26,0,140.66,CUST183
+ORD1126,2023-04-06,Office Supplies,Pen Set,East,United States,3,3090.75,0.15,278.03,CUST134
+ORD1127,2023-07-23,Office Supplies,Stapler,West,United States,3,4234.18,0.05,1133.56,CUST146
+ORD1128,2023-09-08,Technology,Keyboard,West,United States,1,633.18,0,136.44,CUST104
+ORD1129,2024-04-11,Technology,Keyboard,East,United States,5,3113.85,0,604.43,CUST148
+ORD1130,2024-12-14,Technology,Mouse,South,United States,1,895.25,0,305.26,CUST126
+ORD1131,2023-09-07,Office Supplies,Stapler,West,United States,1,1259.11,0,76.86,CUST100
+ORD1132,2024-03-11,Office Supplies,Paper Ream,South,United States,3,282,0.1,82.87,CUST194
+ORD1133,2023-02-21,Furniture,Table,West,United States,3,4484.97,0.15,1011.56,CUST152
+ORD1134,2024-04-12,Office Supplies,Desk Organizer,Central,United States,3,3414.15,0.05,424.05,CUST177
+ORD1135,2024-03-29,Furniture,Sofa,South,United States,1,202.45,0.05,26.81,CUST103
+ORD1136,2024-07-15,Technology,Printer,South,United States,4,5274.2,0,830.42,CUST171
+ORD1137,2024-04-05,Technology,Printer,Central,United States,5,5053.22,0,974.58,CUST102
+ORD1138,2024-06-17,Technology,Printer,Central,United States,1,468.59,0,101.01,CUST104
+ORD1139,2024-03-26,Office Supplies,Pen Set,East,United States,4,5264.86,0,1195.05,CUST146
+ORD1140,2023-10-06,Technology,Monitor,West,United States,5,5675.77,0.15,1372.45,CUST174
+ORD1141,2023-05-22,Office Supplies,Paper Ream,South,United States,1,1355.7,0.1,466.55,CUST149
+ORD1142,2024-12-11,Office Supplies,Paper Ream,West,United States,1,958.6,0.05,74.1,CUST197
+ORD1143,2024-02-29,Technology,Monitor,South,United States,2,1651.39,0,470.8,CUST129
+ORD1144,2024-03-01,Office Supplies,Paper Ream,South,United States,5,3950.84,0,1322.96,CUST103
+ORD1145,2024-02-03,Furniture,Chair,South,United States,1,1390.62,0,390.31,CUST183
+ORD1146,2024-05-03,Office Supplies,Pen Set,Central,United States,3,4410.75,0.15,680.24,CUST142
+ORD1147,2024-02-04,Technology,Keyboard,East,United States,1,123.04,0,23.14,CUST179
+ORD1148,2024-05-14,Office Supplies,Pen Set,South,United States,5,3032.24,0.1,317.06,CUST155
+ORD1149,2024-05-12,Office Supplies,Desk Organizer,Central,United States,1,1346.21,0.05,275.4,CUST131
+ORD1150,2024-11-15,Furniture,Filing Cabinet,East,United States,1,906.88,0.05,56.46,CUST104
+ORD1151,2024-04-23,Office Supplies,Labels,West,United States,1,425.1,0.15,25.31,CUST169
+ORD1152,2024-02-08,Furniture,Sofa,West,United States,1,806.29,0.1,90.22,CUST133
+ORD1153,2023-03-27,Furniture,Filing Cabinet,East,United States,1,760.09,0.15,111.33,CUST125
+ORD1154,2024-04-17,Office Supplies,Stapler,Central,United States,1,726.91,0.05,237.16,CUST160
+ORD1155,2024-01-24,Technology,Printer,South,United States,1,422.55,0,31.84,CUST198
+ORD1156,2023-12-01,Technology,Mouse,Central,United States,3,4438.57,0,1233.86,CUST177
+ORD1157,2024-03-07,Technology,Laptop,South,United States,1,1123.73,0.05,141.29,CUST106
+ORD1158,2023-01-20,Furniture,Sofa,West,United States,1,1343.86,0.05,281.72,CUST117
+ORD1159,2023-12-25,Office Supplies,Stapler,West,United States,1,537.68,0.05,66,CUST188
+ORD1160,2023-02-01,Office Supplies,Paper Ream,West,United States,5,2860.77,0,627.05,CUST116
+ORD1161,2024-09-28,Office Supplies,Paper Ream,East,United States,5,714.57,0.1,85.72,CUST112
+ORD1162,2024-04-29,Furniture,Chair,East,United States,2,1432.43,0,410.75,CUST117
+ORD1163,2024-04-21,Furniture,Bookcase,Central,United States,5,4402.29,0,956.72,CUST139
+ORD1164,2023-06-21,Furniture,Sofa,West,United States,1,851.04,0,115,CUST105
+ORD1165,2023-06-17,Technology,Laptop,West,United States,2,1944.83,0,239.81,CUST158
+ORD1166,2023-11-16,Furniture,Filing Cabinet,South,United States,3,1506.66,0,182.56,CUST121
+ORD1167,2023-07-23,Office Supplies,Labels,East,United States,3,713.28,0.1,217.73,CUST161
+ORD1168,2023-04-15,Furniture,Bookcase,West,United States,4,4842.95,0,358.72,CUST130
+ORD1169,2024-08-02,Office Supplies,Pen Set,South,United States,3,4421.23,0,985.05,CUST174
+ORD1170,2024-11-08,Technology,Laptop,Central,United States,2,35.79,0,7.06,CUST150
+ORD1171,2023-01-13,Technology,Mouse,West,United States,4,5579.08,0.05,1235.68,CUST150
+ORD1172,2024-03-19,Technology,Mouse,East,United States,3,3469.63,0,510.4,CUST118
+ORD1173,2024-03-21,Office Supplies,Labels,Central,United States,2,1532.68,0,320.26,CUST100
+ORD1174,2024-09-22,Furniture,Filing Cabinet,South,United States,1,1153.99,0.15,232.91,CUST199
+ORD1175,2024-03-22,Furniture,Sofa,Central,United States,3,2410.67,0,387.56,CUST109
+ORD1176,2023-11-27,Office Supplies,Stapler,Central,United States,3,313.29,0.1,34.62,CUST139
+ORD1177,2024-04-06,Office Supplies,Desk Organizer,South,United States,1,140.92,0.15,7.16,CUST108
+ORD1178,2023-12-11,Office Supplies,Desk Organizer,Central,United States,1,715.02,0.05,110.59,CUST148
+ORD1179,2023-07-06,Technology,Printer,Central,United States,3,3742.87,0.1,645.85,CUST174
+ORD1180,2023-09-22,Technology,Monitor,Central,United States,1,315.45,0.05,22.07,CUST139
+ORD1181,2024-07-23,Office Supplies,Labels,East,United States,4,326.64,0.15,30.03,CUST113
+ORD1182,2023-03-29,Office Supplies,Desk Organizer,South,United States,2,507.69,0.15,53.78,CUST182
+ORD1183,2024-07-22,Office Supplies,Desk Organizer,South,United States,1,954.3,0.1,138.24,CUST141
+ORD1184,2024-04-03,Office Supplies,Stapler,Central,United States,1,1027.64,0.05,243.79,CUST196
+ORD1185,2023-08-15,Technology,Printer,Central,United States,5,3318.65,0,397.12,CUST196
+ORD1186,2024-11-10,Furniture,Bookcase,South,United States,5,2909.99,0.15,936.85,CUST150
+ORD1187,2024-07-20,Furniture,Bookcase,South,United States,5,920.89,0.05,219.46,CUST171
+ORD1188,2024-07-17,Technology,Monitor,South,United States,1,217.52,0.15,43.21,CUST193
+ORD1189,2023-10-05,Technology,Monitor,East,United States,5,4319.97,0.15,412.57,CUST196
+ORD1190,2023-05-04,Furniture,Table,Central,United States,3,1140.75,0,68.51,CUST185
+ORD1191,2023-05-03,Furniture,Sofa,East,United States,1,1146.06,0.05,316.76,CUST137
+ORD1192,2023-07-16,Office Supplies,Desk Organizer,Central,United States,3,524.52,0.1,98.14,CUST151
+ORD1193,2024-08-26,Furniture,Sofa,Central,United States,5,5989.85,0.15,1173.46,CUST167
+ORD1194,2023-04-13,Office Supplies,Pen Set,East,United States,2,2320.21,0.05,562.29,CUST135
+ORD1195,2024-01-05,Office Supplies,Pen Set,West,United States,2,2154.21,0.05,331.12,CUST110
+ORD1196,2024-12-26,Furniture,Table,Central,United States,4,5454.37,0,1822.77,CUST111
+ORD1197,2023-02-16,Office Supplies,Labels,Central,United States,1,883.48,0,206.24,CUST159
+ORD1198,2024-12-15,Office Supplies,Desk Organizer,West,United States,1,1398.86,0.1,455.5,CUST104
+ORD1199,2023-01-13,Furniture,Bookcase,South,United States,3,3191.36,0,897.97,CUST130
+ORD1200,2024-05-05,Technology,Monitor,East,United States,1,112.69,0.05,30.53,CUST139
+ORD1201,2023-02-22,Technology,Mouse,West,United States,1,1389.1,0,116.64,CUST120
+ORD1202,2023-03-08,Technology,Mouse,West,United States,1,1259.96,0,188.55,CUST153
+ORD1203,2024-08-13,Furniture,Chair,East,United States,5,1744.1,0.15,285.67,CUST152
+ORD1204,2023-06-02,Furniture,Bookcase,West,United States,1,316.31,0,16.26,CUST140
+ORD1205,2023-09-12,Office Supplies,Labels,South,United States,1,603.27,0,186.44,CUST137
+ORD1206,2024-09-12,Furniture,Sofa,East,United States,1,703.89,0.05,190.93,CUST116
+ORD1207,2024-06-19,Technology,Mouse,South,United States,1,58.94,0.05,5.44,CUST123
+ORD1208,2023-11-01,Furniture,Filing Cabinet,Central,United States,1,752.57,0.15,244.17,CUST148
+ORD1209,2024-08-05,Furniture,Chair,West,United States,3,2625.23,0,141.57,CUST184
+ORD1210,2023-08-01,Furniture,Table,Central,United States,1,275.27,0.1,51.67,CUST119
+ORD1211,2024-11-07,Office Supplies,Paper Ream,East,United States,4,5169.37,0.15,544.54,CUST170
+ORD1212,2023-06-27,Furniture,Chair,East,United States,1,471.81,0.05,53.3,CUST182
+ORD1213,2023-01-03,Technology,Mouse,South,United States,4,1262.63,0.15,299.87,CUST192
+ORD1214,2023-10-26,Office Supplies,Paper Ream,Central,United States,4,5025.93,0.05,350.37,CUST177
+ORD1215,2024-12-24,Technology,Mouse,West,United States,1,685.4,0,144.16,CUST193
+ORD1216,2024-12-04,Office Supplies,Pen Set,East,United States,4,4601.52,0.1,481.22,CUST128
+ORD1217,2024-03-11,Office Supplies,Labels,East,United States,5,7098.56,0,931.5,CUST133
+ORD1218,2024-10-25,Office Supplies,Pen Set,East,United States,2,2406.23,0.1,726.53,CUST106
+ORD1219,2023-03-15,Office Supplies,Paper Ream,Central,United States,3,1853.69,0,216.12,CUST187
+ORD1220,2024-09-01,Furniture,Sofa,Central,United States,5,5055.6,0.15,1155.28,CUST166
+ORD1221,2024-03-25,Office Supplies,Desk Organizer,Central,United States,1,982.59,0,286.52,CUST187
+ORD1222,2024-12-17,Technology,Monitor,South,United States,4,3635.06,0.05,1231.54,CUST136
+ORD1223,2024-03-24,Office Supplies,Labels,West,United States,4,1261.71,0,68.01,CUST106
+ORD1224,2024-03-18,Furniture,Bookcase,Central,United States,1,319.75,0.05,27.76,CUST118
+ORD1225,2023-01-27,Office Supplies,Paper Ream,West,United States,2,1935.92,0,615.24,CUST146
+ORD1226,2024-11-19,Technology,Keyboard,West,United States,3,1557.92,0,463.53,CUST166
+ORD1227,2023-06-29,Technology,Keyboard,South,United States,5,305,0.1,72.36,CUST137
+ORD1228,2023-10-12,Office Supplies,Labels,South,United States,4,2202.04,0.15,304.63,CUST185
+ORD1229,2024-10-12,Technology,Laptop,South,United States,2,437.54,0,96.14,CUST158
+ORD1230,2023-12-23,Technology,Monitor,Central,United States,4,2847.55,0,556.51,CUST180
+ORD1231,2024-11-17,Office Supplies,Paper Ream,Central,United States,4,4460.45,0,1070.7,CUST172
+ORD1232,2024-02-26,Furniture,Filing Cabinet,Central,United States,4,3884.52,0.1,348.37,CUST128
+ORD1233,2024-11-09,Technology,Keyboard,West,United States,3,3119.76,0.15,173.2,CUST117
+ORD1234,2024-04-10,Office Supplies,Pen Set,Central,United States,3,3673.29,0,485.67,CUST116
+ORD1235,2023-11-28,Office Supplies,Desk Organizer,West,United States,3,2941.85,0,782.71,CUST185
+ORD1236,2024-11-04,Furniture,Filing Cabinet,South,United States,3,1208.67,0.05,277.06,CUST111
+ORD1237,2023-02-25,Office Supplies,Labels,Central,United States,3,3002.71,0,973.85,CUST125
+ORD1238,2024-09-29,Technology,Mouse,West,United States,3,1742.63,0,307.77,CUST101
+ORD1239,2023-07-28,Technology,Keyboard,East,United States,2,2876.71,0,215.29,CUST135
+ORD1240,2023-10-22,Technology,Mouse,West,United States,1,375.57,0.15,113.09,CUST110
+ORD1241,2023-01-30,Furniture,Sofa,East,United States,2,2162.76,0.05,724.07,CUST154
+ORD1242,2024-12-27,Office Supplies,Pen Set,West,United States,5,7157.95,0.15,1396.71,CUST135
+ORD1243,2024-07-19,Technology,Laptop,East,United States,5,2003.87,0.05,606.09,CUST180
+ORD1244,2023-04-27,Technology,Laptop,East,United States,4,5733.21,0.05,861.55,CUST125
+ORD1245,2024-05-25,Furniture,Bookcase,Central,United States,1,168.83,0,26.25,CUST100
+ORD1246,2024-03-01,Technology,Mouse,East,United States,1,1060.34,0,199.24,CUST134
+ORD1247,2024-04-12,Furniture,Table,South,United States,1,125.87,0.1,32.53,CUST193
+ORD1248,2023-07-15,Furniture,Sofa,East,United States,4,3557.77,0.05,513.67,CUST158
+ORD1249,2023-03-13,Technology,Mouse,Central,United States,1,1443.53,0,483.69,CUST154
+ORD1250,2024-06-03,Technology,Laptop,Central,United States,1,285.85,0.05,77.08,CUST120
+ORD1251,2023-11-02,Furniture,Sofa,South,United States,1,991.59,0,318.31,CUST111
+ORD1252,2023-06-02,Technology,Keyboard,South,United States,5,5214.16,0,1737.45,CUST146
+ORD1253,2023-12-20,Technology,Keyboard,South,United States,1,886.51,0,92.35,CUST184
+ORD1254,2024-04-11,Technology,Printer,East,United States,4,5496.31,0.15,1480.2,CUST147
+ORD1255,2024-08-08,Technology,Printer,South,United States,1,638.43,0.15,122.75,CUST193
+ORD1256,2023-02-14,Technology,Mouse,South,United States,2,2536.76,0,524.43,CUST116
+ORD1257,2024-01-31,Furniture,Table,South,United States,4,3593.77,0.05,784.17,CUST144
+ORD1258,2023-02-07,Office Supplies,Labels,Central,United States,1,1328.65,0.05,201.9,CUST154
+ORD1259,2023-04-13,Technology,Laptop,South,United States,5,536.9,0,113.57,CUST185
+ORD1260,2023-01-16,Furniture,Table,South,United States,1,1109.41,0,350.34,CUST141
+ORD1261,2024-11-01,Office Supplies,Stapler,South,United States,2,714.22,0.05,222.14,CUST129
+ORD1262,2023-09-29,Technology,Keyboard,South,United States,1,1313.31,0.15,216.94,CUST195
+ORD1263,2024-10-27,Office Supplies,Pen Set,South,United States,1,114.34,0.1,7.52,CUST192
+ORD1264,2023-11-21,Furniture,Filing Cabinet,West,United States,4,2900.06,0,650.27,CUST109
+ORD1265,2024-09-24,Office Supplies,Paper Ream,Central,United States,4,2529.89,0.1,686.3,CUST193
+ORD1266,2023-08-21,Furniture,Chair,South,United States,1,174.61,0,24.25,CUST161
+ORD1267,2023-04-11,Furniture,Chair,South,United States,3,218.16,0,70.49,CUST178
+ORD1268,2023-06-20,Furniture,Bookcase,West,United States,1,173.11,0,43.95,CUST111
+ORD1269,2023-02-17,Technology,Laptop,Central,United States,1,1425.44,0.15,182.02,CUST169
+ORD1270,2024-01-03,Technology,Mouse,East,United States,5,6599.43,0.05,2119.19,CUST197
+ORD1271,2023-09-08,Furniture,Filing Cabinet,East,United States,1,1117.6,0.1,133.55,CUST119
+ORD1272,2023-06-24,Office Supplies,Stapler,South,United States,3,2933.92,0.15,877.81,CUST173
+ORD1273,2024-09-26,Furniture,Table,South,United States,1,273.03,0,16.66,CUST102
+ORD1274,2024-08-20,Office Supplies,Paper Ream,South,United States,4,4812.59,0,988.88,CUST119
+ORD1275,2024-10-15,Technology,Mouse,Central,United States,1,792.3,0.05,133.8,CUST149
+ORD1276,2024-11-13,Office Supplies,Desk Organizer,Central,United States,1,1047.07,0.05,308.62,CUST112
+ORD1277,2024-11-24,Furniture,Table,West,United States,3,2430.28,0,773.99,CUST197
+ORD1278,2024-03-28,Technology,Keyboard,Central,United States,1,1317.42,0.05,173.75,CUST128
+ORD1279,2024-10-16,Technology,Monitor,South,United States,1,76.12,0,23.49,CUST108
+ORD1280,2023-11-06,Office Supplies,Desk Organizer,South,United States,5,4931.55,0.15,1334.3,CUST197
+ORD1281,2023-04-20,Office Supplies,Desk Organizer,Central,United States,2,1130.61,0.05,301.9,CUST189
+ORD1282,2024-08-11,Technology,Monitor,West,United States,1,130.76,0.1,10.83,CUST127
+ORD1283,2024-11-05,Technology,Monitor,West,United States,3,4461.89,0,885.88,CUST195
+ORD1284,2024-08-02,Furniture,Chair,South,United States,4,3570.75,0,790.55,CUST139
+ORD1285,2023-10-21,Office Supplies,Labels,Central,United States,1,820.23,0.15,106.72,CUST105
+ORD1286,2023-08-13,Furniture,Table,Central,United States,1,1303.56,0.1,397.81,CUST158
+ORD1287,2024-11-25,Furniture,Table,West,United States,1,507.67,0.15,131.61,CUST141
+ORD1288,2024-10-04,Furniture,Chair,Central,United States,2,1863.46,0.1,181.84,CUST144
+ORD1289,2024-03-27,Office Supplies,Labels,Central,United States,1,703.55,0,62.38,CUST152
+ORD1290,2023-05-15,Office Supplies,Pen Set,Central,United States,4,5455.86,0,1611.61,CUST177
+ORD1291,2024-03-01,Office Supplies,Paper Ream,East,United States,3,2298.38,0,312.84,CUST145
+ORD1292,2024-07-06,Technology,Keyboard,Central,United States,1,1471.97,0,124.75,CUST197
+ORD1293,2023-06-18,Technology,Mouse,Central,United States,2,47.04,0.15,13.36,CUST169
+ORD1294,2023-12-13,Office Supplies,Desk Organizer,West,United States,1,1143.93,0,205.53,CUST197
+ORD1295,2023-05-25,Office Supplies,Desk Organizer,Central,United States,5,2971.53,0.15,239.96,CUST167
+ORD1296,2023-04-03,Technology,Laptop,Central,United States,2,2069.9,0,691.74,CUST163
+ORD1297,2024-07-03,Office Supplies,Desk Organizer,Central,United States,1,1158.77,0,260.32,CUST164
+ORD1298,2024-11-19,Furniture,Bookcase,South,United States,4,3740.66,0.05,1143.61,CUST113
+ORD1299,2024-10-15,Technology,Laptop,East,United States,5,7268.14,0.1,1775.4,CUST151
+ORD1300,2024-04-27,Office Supplies,Labels,Central,United States,3,1744.75,0.15,98.82,CUST105
+ORD1301,2024-09-16,Office Supplies,Stapler,South,United States,5,3690.39,0.05,464.08,CUST186
+ORD1302,2024-12-18,Technology,Mouse,West,United States,1,246.82,0,86.17,CUST180
+ORD1303,2023-05-24,Office Supplies,Stapler,Central,United States,1,682.57,0.15,176.17,CUST131
+ORD1304,2024-05-19,Office Supplies,Stapler,East,United States,1,1161.51,0.1,286.14,CUST126
+ORD1305,2024-07-04,Office Supplies,Desk Organizer,South,United States,1,1426.79,0.1,84.74,CUST192
+ORD1306,2024-01-15,Furniture,Sofa,South,United States,3,4095.57,0.15,989.32,CUST105
+ORD1307,2024-08-24,Furniture,Table,South,United States,1,418.58,0.05,60.1,CUST157
+ORD1308,2024-11-01,Office Supplies,Desk Organizer,South,United States,2,2178.78,0,248.23,CUST163
+ORD1309,2023-10-14,Office Supplies,Pen Set,East,United States,1,980.98,0.1,214.66,CUST179
+ORD1310,2024-03-30,Technology,Printer,Central,United States,1,1452.61,0,451.16,CUST152
+ORD1311,2023-04-12,Furniture,Bookcase,Central,United States,5,3430.02,0,954.6,CUST102
+ORD1312,2023-03-04,Technology,Monitor,East,United States,3,616.66,0.15,199.52,CUST102
+ORD1313,2023-05-06,Technology,Laptop,East,United States,2,2393.68,0,120.57,CUST170
+ORD1314,2024-10-19,Furniture,Sofa,West,United States,1,914.89,0.1,163.85,CUST137
+ORD1315,2023-02-21,Technology,Printer,East,United States,1,249.63,0.15,32.63,CUST187
+ORD1316,2024-08-01,Office Supplies,Stapler,East,United States,1,1476.68,0,78.98,CUST117
+ORD1317,2024-08-23,Office Supplies,Paper Ream,Central,United States,4,2379.26,0.05,615.03,CUST132
+ORD1318,2023-06-01,Furniture,Chair,Central,United States,2,2343.96,0.05,455.08,CUST187
+ORD1319,2023-05-29,Office Supplies,Labels,Central,United States,1,370.65,0,82.01,CUST178
+ORD1320,2023-06-28,Office Supplies,Stapler,East,United States,4,3724.21,0.1,572.8,CUST139
+ORD1321,2023-01-16,Technology,Printer,Central,United States,1,496.43,0,104.39,CUST176
+ORD1322,2023-01-17,Office Supplies,Pen Set,West,United States,4,237.89,0.1,37.43,CUST165
+ORD1323,2023-05-10,Furniture,Filing Cabinet,West,United States,4,3422.54,0,993.14,CUST197
+ORD1324,2023-03-07,Technology,Mouse,Central,United States,1,259.55,0,87.07,CUST160
+ORD1325,2024-06-09,Furniture,Chair,South,United States,1,1345.37,0,445.13,CUST194
+ORD1326,2024-05-30,Office Supplies,Labels,West,United States,1,1066.5,0,253.39,CUST183
+ORD1327,2024-11-05,Furniture,Bookcase,South,United States,4,3689.06,0.05,1174.76,CUST103
+ORD1328,2024-10-20,Office Supplies,Stapler,South,United States,4,4911.09,0,954.08,CUST140
+ORD1329,2024-02-16,Technology,Laptop,South,United States,2,2200.14,0.05,588.42,CUST111
+ORD1330,2024-12-30,Technology,Laptop,West,United States,5,4894.69,0,1524.87,CUST118
+ORD1331,2023-11-26,Furniture,Table,West,United States,5,3552.86,0.15,371.75,CUST152
+ORD1332,2023-05-10,Technology,Keyboard,Central,United States,5,375.28,0.1,81.29,CUST117
+ORD1333,2024-01-26,Furniture,Sofa,Central,United States,1,350.4,0,69.37,CUST127
+ORD1334,2024-04-09,Furniture,Sofa,South,United States,1,610.86,0.15,43.77,CUST162
+ORD1335,2023-04-12,Furniture,Chair,East,United States,5,1969.74,0.1,201.42,CUST184
+ORD1336,2024-03-16,Technology,Printer,South,United States,5,3148.51,0.1,751.33,CUST191
+ORD1337,2023-12-14,Technology,Mouse,South,United States,2,2307.82,0.1,143.16,CUST148
+ORD1338,2023-04-08,Technology,Mouse,Central,United States,1,872.23,0.1,51.3,CUST197
+ORD1339,2024-11-12,Technology,Monitor,East,United States,2,2622.8,0,755.07,CUST138
+ORD1340,2024-12-04,Technology,Laptop,West,United States,1,1488.28,0,481.77,CUST111
+ORD1341,2023-03-29,Office Supplies,Desk Organizer,West,United States,1,938.22,0.15,253.26,CUST198
+ORD1342,2024-01-17,Office Supplies,Labels,West,United States,1,1076.58,0,130.55,CUST177
+ORD1343,2024-08-23,Furniture,Sofa,Central,United States,1,279.66,0.15,19.78,CUST140
+ORD1344,2024-11-17,Office Supplies,Desk Organizer,Central,United States,4,620.46,0.15,113.91,CUST188
+ORD1345,2024-11-12,Technology,Laptop,Central,United States,2,1786.99,0,299.01,CUST127
+ORD1346,2024-09-06,Technology,Monitor,West,United States,1,1288.4,0.15,190.11,CUST139
+ORD1347,2024-08-14,Furniture,Table,East,United States,2,410,0.15,49.65,CUST130
+ORD1348,2024-11-03,Technology,Printer,West,United States,1,1326.73,0,244.96,CUST175
+ORD1349,2023-12-25,Furniture,Bookcase,West,United States,4,908.71,0.15,113.24,CUST142
+ORD1350,2023-10-13,Furniture,Table,South,United States,2,2126.2,0.1,348.29,CUST136
+ORD1351,2024-07-28,Furniture,Sofa,West,United States,5,4995.34,0.15,1421.36,CUST143
+ORD1352,2024-09-15,Furniture,Bookcase,West,United States,2,2595.36,0.1,550.14,CUST119
+ORD1353,2023-07-04,Technology,Monitor,Central,United States,1,1480.17,0,309.87,CUST119
+ORD1354,2023-12-26,Office Supplies,Paper Ream,East,United States,1,68.62,0.05,12.74,CUST158
+ORD1355,2024-08-02,Furniture,Filing Cabinet,West,United States,3,491.79,0.05,30.72,CUST119
+ORD1356,2023-05-26,Furniture,Chair,West,United States,3,2175.14,0.05,111.98,CUST197
+ORD1357,2024-06-27,Office Supplies,Desk Organizer,South,United States,1,962.29,0,215.59,CUST155
+ORD1358,2024-04-09,Technology,Printer,Central,United States,5,3936.89,0.1,825.46,CUST122
+ORD1359,2023-11-16,Furniture,Bookcase,West,United States,4,1875.26,0,207.32,CUST107
+ORD1360,2023-02-23,Office Supplies,Paper Ream,West,United States,1,290.64,0.15,53.22,CUST104
+ORD1361,2024-11-21,Office Supplies,Pen Set,South,United States,5,1369.77,0,340.37,CUST189
+ORD1362,2024-11-08,Technology,Mouse,South,United States,1,1028.04,0,126.7,CUST125
+ORD1363,2024-02-29,Technology,Printer,West,United States,5,4301.04,0.1,361,CUST188
+ORD1364,2023-12-20,Technology,Laptop,Central,United States,4,5515.32,0,632.62,CUST179
+ORD1365,2024-11-25,Furniture,Sofa,South,United States,4,2387.43,0.15,532.77,CUST161
+ORD1366,2024-06-23,Furniture,Bookcase,West,United States,2,494.68,0,153.32,CUST188
+ORD1367,2023-08-14,Technology,Keyboard,West,United States,3,3527.26,0.15,481.84,CUST174
+ORD1368,2023-01-08,Office Supplies,Pen Set,East,United States,2,1958.52,0.1,490.17,CUST169
+ORD1369,2023-05-21,Technology,Monitor,Central,United States,1,1145.8,0,166.32,CUST174
+ORD1370,2023-05-03,Office Supplies,Desk Organizer,South,United States,1,189.11,0,28.09,CUST164
+ORD1371,2023-06-29,Office Supplies,Desk Organizer,East,United States,2,1837.3,0.15,301.55,CUST192
+ORD1372,2024-05-27,Furniture,Bookcase,West,United States,1,898.76,0,164.77,CUST189
+ORD1373,2024-02-11,Furniture,Chair,South,United States,1,909.14,0,252.56,CUST108
+ORD1374,2023-01-20,Technology,Laptop,Central,United States,1,818.12,0,158.51,CUST192
+ORD1375,2024-08-12,Technology,Keyboard,South,United States,1,172.29,0.15,29.23,CUST136
+ORD1376,2024-12-27,Furniture,Filing Cabinet,Central,United States,5,4025.34,0.05,1124.94,CUST169
+ORD1377,2023-04-28,Technology,Laptop,Central,United States,4,4320.01,0.05,891.52,CUST120
+ORD1378,2023-06-25,Furniture,Filing Cabinet,Central,United States,5,3259.92,0.15,1041.25,CUST124
+ORD1379,2023-04-01,Technology,Laptop,East,United States,2,2782.56,0.1,919.17,CUST185
+ORD1380,2024-03-22,Furniture,Filing Cabinet,West,United States,1,161.12,0.15,37.9,CUST151
+ORD1381,2024-02-10,Technology,Monitor,East,United States,4,1871.45,0.1,396.28,CUST115
+ORD1382,2023-12-08,Office Supplies,Stapler,West,United States,1,919.4,0,156.27,CUST176
+ORD1383,2024-06-27,Furniture,Table,Central,United States,2,2473.06,0.05,215.07,CUST173
+ORD1384,2023-12-26,Furniture,Table,East,United States,5,3962.47,0,872.51,CUST141
+ORD1385,2023-04-16,Office Supplies,Pen Set,East,United States,2,1285.09,0,208.25,CUST144
+ORD1386,2023-06-27,Furniture,Table,West,United States,1,177.33,0.15,40.87,CUST120
+ORD1387,2023-07-01,Furniture,Filing Cabinet,South,United States,4,3577.49,0,406.45,CUST109
+ORD1388,2024-07-31,Furniture,Filing Cabinet,Central,United States,1,547.55,0,175.22,CUST179
+ORD1389,2024-10-04,Technology,Printer,South,United States,1,362.94,0.15,51.04,CUST123
+ORD1390,2023-03-11,Technology,Mouse,Central,United States,1,1278.25,0,374.35,CUST118
+ORD1391,2023-10-09,Furniture,Chair,Central,United States,2,466.12,0,44.7,CUST148
+ORD1392,2024-06-03,Office Supplies,Pen Set,South,United States,1,1305.2,0,150.13,CUST180
+ORD1393,2024-04-07,Office Supplies,Stapler,Central,United States,4,180.89,0.05,41.99,CUST131
+ORD1394,2023-10-21,Office Supplies,Stapler,South,United States,1,355.6,0.15,81.2,CUST124
+ORD1395,2024-04-18,Furniture,Sofa,West,United States,1,419.06,0.15,105.92,CUST141
+ORD1396,2024-04-05,Furniture,Table,Central,United States,4,2696.91,0,695.08,CUST123
+ORD1397,2024-09-11,Technology,Keyboard,East,United States,2,2459.75,0.1,657.5,CUST141
+ORD1398,2023-03-05,Technology,Laptop,Central,United States,5,5806.04,0.1,439.5,CUST196
+ORD1399,2023-03-28,Furniture,Table,West,United States,2,591.76,0,69.83,CUST140
