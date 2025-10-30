@@ -31,4 +31,4 @@ df["客单价"] = df["sales"] / df["quantity"]
 # 将除零导致的无穷大(inf)转为NaN
 df["客单价"] = df["客单价"].replace([np.inf, -np.inf], np.nan)
 print("\n3. 新增客单价列后（部分数据）：")
-print(df[["order_id", "sales", "quantity", "客单价"]].head())
+print(df[["order_id", "sales", "quantity", "客单价"]].head(10))
