@@ -8,7 +8,7 @@ from threading import Event
 # Kafka配置
 KAFKA_BROKER = '192.168.1.124:9092'
 # KAFKA_BROKER = '192.168.250.42:9092'
-TOPIC_NAME = 'test_ck'
+TOPIC_NAME = 'test_ck_v2'
 MESSAGES_PER_SECOND = 500  # 每秒发送的消息数量
 RUN_DURATION = 0  # 运行时长(秒)，0表示无限运行
 
