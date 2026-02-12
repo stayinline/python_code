@@ -108,3 +108,6 @@ def generate_dirt_data():
         elapsed = time.time() - loop_start
         time.sleep(max(0, 3 - elapsed))
 
+
+if __name__ == "__main__":
+    generate_dirt_data()
