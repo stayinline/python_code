@@ -1,0 +1,4 @@
+INSERT INTO sl_change_liquid (id, report_time, _source_type, plate_barcode, change_liquid_count, operation_time, protocol_step_id) VALUES (1, '2025-09-26 11:14:44', 2, 'A003001P00C01', 1, '2025-06-12 12:45:23', 'change_liquid_step_1');
+INSERT INTO sl_change_liquid (id, report_time, _source_type, plate_barcode, change_liquid_count, operation_time, protocol_step_id) VALUES (2, '2025-09-26 11:14:44', 2, 'A003001P00C02', 1, '2025-06-12 12:45:23', 'change_liquid_step_1');
+INSERT INTO sl_change_liquid (id, report_time, _source_type, plate_barcode, change_liquid_count, operation_time, protocol_step_id) VALUES (3, '2025-09-26 11:14:44', 2, 'A003001P00C01', 2, '2025-06-14 12:45:23', 'change_liquid_step_2');
+INSERT INTO sl_change_liquid (id, report_time, _source_type, plate_barcode, change_liquid_count, operation_time, protocol_step_id) VALUES (4, '2025-09-26 11:14:44', 2, 'A003001P00C02', 2, '2025-06-14 12:45:23', 'change_liquid_step_2');
