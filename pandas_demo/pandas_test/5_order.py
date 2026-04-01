@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np  # 用于处理可能的除零问题
 
 # 修正数据读取（使用read_excel读取xlsx文件）
-file_name = r"D:\code\python\pandas_demo\file\sales_data.xlsx"
+file_name = r"/file/sales_data.xlsx"
 df = pd.read_csv(file_name)
 print("原始数据形状：", df.shape)
 

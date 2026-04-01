@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Claude Code (本地配置，不提交)
+.claude/
+
+# Marimo session
+__marimo__/
+
+# HuggingFace 模型缓存（体积巨大，不提交）
+huggingface_cache/
+**/huggingface_cache/
+
+# 环境变量
+.env
+.env.local
+
+# 测试缓存
+.pytest_cache/
+
+# macOS
+.DS_Store

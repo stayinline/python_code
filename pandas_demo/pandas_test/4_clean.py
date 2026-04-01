@@ -2,7 +2,7 @@ import pandas as pd
 
 # 读取 csv
 # file_name = "D:\code\python\pandas_demo\file\titanic.csv" 这种在Windows环境会报错，解析不了这种格式的路径
-file_name = r"D:\code\python\pandas_demo\file\titanic.csv"
+file_name = r"/file/titanic.csv"
 df = pd.read_csv(file_name, encoding="utf-8-sig")
 print(df)
 
@@ -14,7 +14,7 @@ print(df.groupby("sex"))
 
 
 
-file_name = r"D:\code\python\pandas_demo\file\sales_data.xlsx"
+file_name = r"/file/sales_data.xlsx"
 df = pd.read_csv(file_name, encoding="utf-8-sig")
 print(df)
 

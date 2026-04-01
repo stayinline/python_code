@@ -21,7 +21,7 @@ sut_data = {
 s2 = pd.DataFrame(sut_data)
 print(s2)
 
-save_path = r'D:\code\python\pandas_demo\file\excellent_students.csv'
+save_path = r'/file/excellent_students.csv'
 
 s2[s2["成绩"] > 90].to_csv(
     save_path,

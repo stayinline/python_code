@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt  # 用于绘图
 plt.rcParams["font.family"] = ["SimHei", "WenQuanYi Micro Hei", "Heiti TC"]
 
 # 1. 读取数据（请替换为你的文件实际路径）
-file_name = r"D:\code\python\pandas_demo\file\titanic.csv"  # 注意路径正确性
+file_name = r"/file/titanic.csv"  # 注意路径正确性
 df = pd.read_csv(file_name)
 print("原始数据形状：", df.shape)
 
