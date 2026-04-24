@@ -1,0 +1,291 @@
+2026-04-24 17:26:22,372 - parse_excel_data - INFO - ================================================================================
+2026-04-24 17:26:22,373 - parse_excel_data - INFO - 开始数据处理流程
+2026-04-24 17:26:22,373 - parse_excel_data - INFO - ================================================================================
+2026-04-24 17:26:22,373 - parse_excel_data - INFO - 
+【步骤 1/6】连接 ClickHouse
+2026-04-24 17:26:22,484 - parse_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 17:26:22,484 - parse_excel_data - INFO - ✓ 连接成功
+2026-04-24 17:26:22,484 - parse_excel_data - INFO - 
+【步骤 2/6】执行 SQL 文件创建表结构
+2026-04-24 17:26:22,515 - parse_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 17:26:22,523 - parse_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 17:26:22,897 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 17:26:22,947 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 17:26:22,971 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 17:26:22,979 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 17:26:23,005 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 17:26:23,028 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 17:26:23,047 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 17:26:23,070 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_prd_part_defect_code
+(
+    `object_rrn` Int64 COMMENT '主键',...
+2026-04-24 17:26:23,108 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ad_user
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+
+    `org...
+2026-04-24 17:26:23,145 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+    `org_...
+2026-04-24 17:26:23,162 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dim_calendar
+(
+    `factory`               Nullable(String) COMMENT...
+2026-04-24 17:26:23,203 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_scrap_his
+(
+    `date_key`                 String COMMENT...
+2026-04-24 17:26:23,218 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_wo
+(
+    `object_rrn`                Int64 COMMENT '对象序...
+2026-04-24 17:26:23,239 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a3g70_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 17:26:23,255 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a4710_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 17:26:23,279 - parse_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.imp_yield_grade
+(
+    `grade_id`     String COMMENT 'Oracle NUMBER'...
+2026-04-24 17:26:23,279 - parse_excel_data - INFO - ✓ 表结构创建成功
+2026-04-24 17:26:23,279 - parse_excel_data - INFO - 
+【步骤 3/6】解析表元数据（从 table_name_sheet_map 文件）
+2026-04-24 17:26:23,279 - parse_excel_data - INFO - 开始从 table_name_sheet_map 文件解析表元数据
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_mm_material:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ODS_MES_MM_MATERIAL
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 193, 数据行: 194-203 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_wf_process_flow_node:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ODS_MES_WF_PROCESS_FLOW_NODE
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 60, 数据行: 61-70 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_wf_step:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ODS_MES_WF_STEP
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 78, 数据行: 79-88 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_ct_incoming_check:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ODS_MES_CT_INCOMING_CHECK
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 48, 数据行: 49-58 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_wip_future_action:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ods_mes_wip_future_action
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 178, 数据行: 179-188 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_wip_lot_hld:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ODS_MES_WIP_LOT_HLD
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 60, 数据行: 61-70 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 dwd_panel_inout_his:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: dwd_panel_inout_his
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 392, 数据行: 393-402 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_prd_part_defect_code:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ods_mes_prd_part_defect_code
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     表头行: 49, 数据行: 50-59 (共10行)
+2026-04-24 17:26:23,280 - parse_excel_data - INFO - ✓ 解析表 ods_mes_ad_user:
+2026-04-24 17:26:23,280 - parse_excel_data - INFO -     Sheet名称: ods_mes_ad_user
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 90, 数据行: 91-100 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 ods_mes_wip_lot:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: ods_mes_wip_lot
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 359, 数据行: 360-369 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 dim_calendar:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: dim_calendar
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 37, 数据行: 38-47 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 dwd_panel_scrap_his:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: DWD_PANEL_SCRAP_HIS
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 64, 数据行: 65-74 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 ods_mes_wip_wo:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: ods_mes_wip_wo
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 166, 数据行: 167-176 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 dwd_panel_a3g70_defect:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: dwd_panel_a3G70_defect
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 22, 数据行: 23-32 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 dwd_panel_a4710_defect:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: dwd_panel_a4710_defect
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 22, 数据行: 23-32 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 解析表 imp_yield_grade:
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     Sheet名称: imp_yield_grade
+2026-04-24 17:26:23,281 - parse_excel_data - INFO -     表头行: 13, 数据行: 14-23 (共10行)
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - 
+表元数据解析完成，共解析 16 个表
+2026-04-24 17:26:23,281 - parse_excel_data - INFO - ✓ 元数据解析成功
+2026-04-24 17:26:23,282 - parse_excel_data - INFO - 
+【步骤 4/6】从 Excel 加载数据
+2026-04-24 17:26:23,282 - parse_excel_data - INFO - 开始从 Excel 文件加载数据
+2026-04-24 17:26:23,759 - parse_excel_data - INFO - ✓ 表 ods_mes_mm_material: 成功加载 10 行数据 (列数: 85)
+2026-04-24 17:26:23,762 - parse_excel_data - INFO - ✓ 表 ods_mes_wf_process_flow_node: 成功加载 10 行数据 (列数: 18)
+2026-04-24 17:26:23,766 - parse_excel_data - INFO - ✓ 表 ods_mes_wf_step: 成功加载 10 行数据 (列数: 30)
+2026-04-24 17:26:23,769 - parse_excel_data - INFO - ✓ 表 ods_mes_ct_incoming_check: 成功加载 10 行数据 (列数: 20)
+2026-04-24 17:26:23,775 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_future_action: 成功加载 10 行数据 (列数: 73)
+2026-04-24 17:26:23,778 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_lot_hld: 成功加载 10 行数据 (列数: 25)
+2026-04-24 17:26:23,787 - parse_excel_data - INFO - ✓ 表 dwd_panel_inout_his: 成功加载 10 行数据 (列数: 75)
+2026-04-24 17:26:23,790 - parse_excel_data - INFO - ✓ 表 ods_mes_prd_part_defect_code: 成功加载 10 行数据 (列数: 17)
+2026-04-24 17:26:23,794 - parse_excel_data - INFO - ✓ 表 ods_mes_ad_user: 成功加载 10 行数据 (列数: 34)
+2026-04-24 17:26:23,807 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_lot: 成功加载 10 行数据 (列数: 170)
+2026-04-24 17:26:23,809 - parse_excel_data - INFO - ✓ 表 dim_calendar: 成功加载 10 行数据 (列数: 15)
+2026-04-24 17:26:23,813 - parse_excel_data - INFO - ✓ 表 dwd_panel_scrap_his: 成功加载 10 行数据 (列数: 50)
+2026-04-24 17:26:23,820 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_wo: 成功加载 10 行数据 (列数: 72)
+2026-04-24 17:26:23,822 - parse_excel_data - INFO - ✓ 表 dwd_panel_a3g70_defect: 成功加载 10 行数据 (列数: 11)
+2026-04-24 17:26:23,824 - parse_excel_data - INFO - ✓ 表 dwd_panel_a4710_defect: 成功加载 10 行数据 (列数: 11)
+2026-04-24 17:26:23,825 - parse_excel_data - INFO - ✓ 表 imp_yield_grade: 成功加载 10 行数据 (列数: 2)
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+Excel 数据加载完成: 成功 16 个表，失败 0 个表
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - ✓ 数据加载成功
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+【步骤 5/6】比对数据一致性
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 开始比对数据一致性
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+表 ods_mes_mm_material:
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   列数: 85
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+表 ods_mes_wf_process_flow_node:
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   列数: 18
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+表 ods_mes_wf_step:
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   列数: 30
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+表 ods_mes_ct_incoming_check:
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   列数: 20
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+表 ods_mes_wip_future_action:
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   列数: 73
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,826 - parse_excel_data - INFO - 
+表 ods_mes_wip_lot_hld:
+2026-04-24 17:26:23,826 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 25
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 dwd_panel_inout_his:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 75
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 ods_mes_prd_part_defect_code:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 17
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 ods_mes_ad_user:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 34
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 ods_mes_wip_lot:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 170
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 dim_calendar:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 15
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 dwd_panel_scrap_his:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 50
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,827 - parse_excel_data - INFO - 
+表 ods_mes_wip_wo:
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,827 - parse_excel_data - INFO -   列数: 72
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - 
+表 dwd_panel_a3g70_defect:
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   列数: 11
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - 
+表 dwd_panel_a4710_defect:
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   列数: 11
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - 
+表 imp_yield_grade:
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   Excel 实际行数: 10
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   预期行数: 10
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   列数: 2
+2026-04-24 17:26:23,828 - parse_excel_data - INFO -   ✓ 行数一致
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - 
+数据比对总结: 16 个表一致, 0 个表不一致
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - ✓ 数据比对完成
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - 
+【步骤 6/6】补全空字段并写入 ClickHouse
+2026-04-24 17:26:23,828 - parse_excel_data - INFO - 开始补全空字段
+2026-04-24 17:26:23,840 - parse_excel_data - INFO - ✓ 表 ods_mes_mm_material: 补全了 587 个空值，共 10 行
+2026-04-24 17:26:23,842 - parse_excel_data - INFO - ✓ 表 ods_mes_wf_process_flow_node: 补全了 18 个空值，共 10 行
+2026-04-24 17:26:23,846 - parse_excel_data - INFO - ✓ 表 ods_mes_wf_step: 补全了 145 个空值，共 10 行
+2026-04-24 17:26:23,848 - parse_excel_data - INFO - ✓ 表 ods_mes_ct_incoming_check: 补全了 90 个空值，共 10 行
+2026-04-24 17:26:23,859 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_future_action: 补全了 530 个空值，共 10 行
+2026-04-24 17:26:23,862 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_lot_hld: 补全了 100 个空值，共 10 行
+2026-04-24 17:26:23,871 - parse_excel_data - INFO - ✓ 表 dwd_panel_inout_his: 补全了 360 个空值，共 10 行
+2026-04-24 17:26:23,873 - parse_excel_data - INFO - ✓ 表 ods_mes_prd_part_defect_code: 补全了 10 个空值，共 10 行
+2026-04-24 17:26:23,877 - parse_excel_data - INFO - ✓ 表 ods_mes_ad_user: 补全了 125 个空值，共 10 行
+2026-04-24 17:26:23,897 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_lot: 补全了 842 个空值，共 10 行
+2026-04-24 17:26:23,899 - parse_excel_data - INFO - ✓ 表 dim_calendar: 补全了 60 个空值，共 10 行
+2026-04-24 17:26:23,905 - parse_excel_data - INFO - ✓ 表 dwd_panel_scrap_his: 补全了 153 个空值，共 10 行
+2026-04-24 17:26:23,914 - parse_excel_data - INFO - ✓ 表 ods_mes_wip_wo: 补全了 359 个空值，共 10 行
+2026-04-24 17:26:23,914 - parse_excel_data - INFO - ✓ 表 dwd_panel_a3g70_defect: 无空值，共 10 行
+2026-04-24 17:26:23,915 - parse_excel_data - INFO - ✓ 表 dwd_panel_a4710_defect: 无空值，共 10 行
+2026-04-24 17:26:23,915 - parse_excel_data - INFO - ✓ 表 imp_yield_grade: 无空值，共 10 行
+2026-04-24 17:26:23,915 - parse_excel_data - INFO - 
+空字段补全完成，共补全 3379 个空值
+2026-04-24 17:26:23,915 - parse_excel_data - INFO - 开始写入 ClickHouse
+2026-04-24 17:26:23,988 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_mm_material: 10 条数据
+2026-04-24 17:26:24,013 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_wf_process_flow_node: 10 条数据
+2026-04-24 17:26:24,030 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_wf_step: 10 条数据
+2026-04-24 17:26:24,053 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_ct_incoming_check: 10 条数据
+2026-04-24 17:26:24,135 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_wip_future_action: 10 条数据
+2026-04-24 17:26:24,166 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_wip_lot_hld: 10 条数据
+2026-04-24 17:26:24,206 - parse_excel_data - INFO - ✓ 成功写入表 dwd_panel_inout_his: 10 条数据
+2026-04-24 17:26:24,230 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_prd_part_defect_code: 10 条数据
+2026-04-24 17:26:24,257 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_ad_user: 10 条数据
+2026-04-24 17:26:24,328 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_wip_lot: 10 条数据
+2026-04-24 17:26:24,367 - parse_excel_data - INFO - ✓ 成功写入表 dim_calendar: 10 条数据
+2026-04-24 17:26:24,430 - parse_excel_data - INFO - ✓ 成功写入表 dwd_panel_scrap_his: 10 条数据
+2026-04-24 17:26:24,484 - parse_excel_data - INFO - ✓ 成功写入表 ods_mes_wip_wo: 10 条数据
+2026-04-24 17:26:24,546 - parse_excel_data - INFO - ✓ 成功写入表 dwd_panel_a3g70_defect: 10 条数据
+2026-04-24 17:26:24,565 - parse_excel_data - INFO - ✓ 成功写入表 dwd_panel_a4710_defect: 10 条数据
+2026-04-24 17:26:24,575 - parse_excel_data - INFO - ✓ 成功写入表 imp_yield_grade: 10 条数据
+2026-04-24 17:26:24,575 - parse_excel_data - INFO - 
+数据写入完成:
+2026-04-24 17:26:24,575 - parse_excel_data - INFO -   成功: 16 个表
+2026-04-24 17:26:24,575 - parse_excel_data - INFO -   失败: 0 个表
+2026-04-24 17:26:24,575 - parse_excel_data - INFO -   总数据量: 160 条
+2026-04-24 17:26:24,575 - parse_excel_data - INFO - 
+================================================================================
+2026-04-24 17:26:24,575 - parse_excel_data - INFO - ✅ 数据处理流程全部完成
+2026-04-24 17:26:24,575 - parse_excel_data - INFO - ================================================================================

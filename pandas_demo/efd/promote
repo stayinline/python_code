@@ -1,0 +1,27 @@
+依赖：
+clickhouse连接配置信息：
+--host 192.168.1.33 --user default --password h6TWgrz227Fubhmb
+
+任务：
+
+1、读取 efd/rptdw/rptdw_v2.sql 中的clickhouse SQL，创建数据库和表
+
+2、根据 efd/origin_data 目录下的文件的注释信息（Excel文件的sheet、行数等），读取Excel的数据，解析出来
+
+3、根据 efd/origin_data 目录下的文件手动复制出来的数据，将解析出来的数据和复制的样例数据做 一次 比对check，从中选择符合当前实际场景的值
+
+4、补全解析和手动复制的数据中数据为空的字段（注意需要贴合数据和表的业务意义）
+
+5、把整理后的各个表的字段的值，写入 clickhouse 的对应表中
+
+注意：
+还需要记录解析的数据结果是什么，以及读取到的样例数据是什么，写入clickhouse的数据是什么，用日志的方式打印，方便快速核验数据
+
+
+
+根据efd/rptdw/rptdw_v3.sql 修改efd/mock_data_v3.py的代码逻辑。
+如果字段是业务字段，那么这个字段必须是String类型，有报错，就需要修改python代码使得逻辑正确。
+如果字段不是业务字段，那么是你可以自己修改SQL文件，改成合理的类型即可。
+efd/efd_data_processing_v3.log 是这个python代码的日志输出，根据报错，逐个解决
+
+

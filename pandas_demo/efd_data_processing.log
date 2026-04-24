@@ -1,0 +1,792 @@
+2026-04-24 15:17:03,300 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:17:03,304 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:17:03,383 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:17:03,394 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:17:03,464 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:17:03,496 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:17:03,529 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:17:03,552 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:17:03,571 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:17:03,610 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 44.
+DB::Exception: Partition key contains nullable columns, but merge tree setting `allow_nullable_key` is disabled. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000000dcf156b
+4. DB::checkKeyExpression(DB::ExpressionActions const&, DB::Block const&, String const&, bool) @ 0x00000000193ff1a2
+5. DB::MergeTreeData::checkPartitionKeyAndInitMinMax(DB::KeyDescription const&) @ 0x00000000193f32d4
+6. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f07f3
+7. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+8. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+9. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+10. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+11. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+12. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+13. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+14. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+15. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+16. DB::TCPHandler::run() @ 0x0000000019c78599
+17. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+18. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+19. Poco::PooledThread::run() @ 0x000000001f1707c7
+20. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+21. start_thread @ 0x000000000009caa4
+22. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:18:02,702 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:18:02,706 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:18:02,731 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:18:02,763 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:18:02,858 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:18:02,893 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:18:02,947 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:18:02,982 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:18:03,023 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:18:03,045 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 44.
+DB::Exception: Sorting key contains nullable columns, but merge tree setting `allow_nullable_key` is disabled. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000000dcf156b
+4. DB::checkKeyExpression(DB::ExpressionActions const&, DB::Block const&, String const&, bool) @ 0x00000000193ff1a2
+5. DB::MergeTreeData::checkProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, bool, bool, bool, std::shared_ptr<DB::Context const>) const @ 0x00000000193fdcad
+6. DB::MergeTreeData::setProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, std::shared_ptr<DB::Context const>) @ 0x00000000193f35f8
+7. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f0812
+8. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+9. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+10. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+11. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+12. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+13. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+16. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+17. DB::TCPHandler::run() @ 0x0000000019c78599
+18. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+19. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+20. Poco::PooledThread::run() @ 0x000000001f1707c7
+21. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+22. start_thread @ 0x000000000009caa4
+23. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:18:59,666 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:18:59,670 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:18:59,714 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:18:59,726 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:18:59,776 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:18:59,824 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:18:59,861 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:18:59,885 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:18:59,927 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:18:59,957 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:18:59,980 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 44.
+DB::Exception: Partition key contains nullable columns, but merge tree setting `allow_nullable_key` is disabled. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000000dcf156b
+4. DB::checkKeyExpression(DB::ExpressionActions const&, DB::Block const&, String const&, bool) @ 0x00000000193ff1a2
+5. DB::MergeTreeData::checkPartitionKeyAndInitMinMax(DB::KeyDescription const&) @ 0x00000000193f32d4
+6. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f07f3
+7. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+8. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+9. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+10. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+11. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+12. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+13. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+14. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+15. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+16. DB::TCPHandler::run() @ 0x0000000019c78599
+17. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+18. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+19. Poco::PooledThread::run() @ 0x000000001f1707c7
+20. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+21. start_thread @ 0x000000000009caa4
+22. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:23:08,808 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:23:08,812 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:23:08,839 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:23:08,847 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:23:08,880 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:23:08,936 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:23:08,949 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:23:08,990 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:23:09,055 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:23:09,124 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:23:09,147 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 44.
+DB::Exception: Sorting key contains nullable columns, but merge tree setting `allow_nullable_key` is disabled. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000000dcf156b
+4. DB::checkKeyExpression(DB::ExpressionActions const&, DB::Block const&, String const&, bool) @ 0x00000000193ff1a2
+5. DB::MergeTreeData::checkProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, bool, bool, bool, std::shared_ptr<DB::Context const>) const @ 0x00000000193fdcad
+6. DB::MergeTreeData::setProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, std::shared_ptr<DB::Context const>) @ 0x00000000193f35f8
+7. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f0812
+8. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+9. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+10. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+11. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+12. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+13. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+16. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+17. DB::TCPHandler::run() @ 0x0000000019c78599
+18. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+19. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+20. Poco::PooledThread::run() @ 0x000000001f1707c7
+21. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+22. start_thread @ 0x000000000009caa4
+23. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:24:20,944 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:24:20,947 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:24:21,010 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:24:21,024 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:24:21,112 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:24:21,162 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:24:21,183 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:24:21,212 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:24:21,236 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:24:21,254 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:24:21,303 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:24:21,321 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 44.
+DB::Exception: Sorting key contains nullable columns, but merge tree setting `allow_nullable_key` is disabled. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000000dcf156b
+4. DB::checkKeyExpression(DB::ExpressionActions const&, DB::Block const&, String const&, bool) @ 0x00000000193ff1a2
+5. DB::MergeTreeData::checkProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, bool, bool, bool, std::shared_ptr<DB::Context const>) const @ 0x00000000193fdcad
+6. DB::MergeTreeData::setProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, std::shared_ptr<DB::Context const>) @ 0x00000000193f35f8
+7. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f0812
+8. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+9. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+10. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+11. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+12. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+13. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+16. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+17. DB::TCPHandler::run() @ 0x0000000019c78599
+18. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+19. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+20. Poco::PooledThread::run() @ 0x000000001f1707c7
+21. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+22. start_thread @ 0x000000000009caa4
+23. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:27:41,556 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:27:41,560 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:27:41,588 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:27:41,596 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:27:41,644 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:27:41,695 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:27:41,736 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:27:41,752 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:27:41,765 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:27:41,775 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:27:41,796 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:27:41,812 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 169.
+DB::Exception: The column update_time cannot be used as a version column for storage ReplacingMergeTree because it is of type Nullable(DateTime) (must be of an integer type or of type Date/DateTime/DateTime64). Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&, String const&, String>(int, FormatStringHelperImpl<std::type_identity<String const&>::type, std::type_identity<String const&>::type, std::type_identity<String>::type>, String const&, String const&, String&&) @ 0x00000000172d36eb
+4. DB::MergeTreeData::MergingParams::check(DB::MergeTreeSettings const&, DB::StorageInMemoryMetadata const&) const::$_2::operator()(bool, String const&) const @ 0x00000000194000c4
+5. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f1528
+6. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+7. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+8. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+9. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+10. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+11. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+12. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+13. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+14. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+15. DB::TCPHandler::run() @ 0x0000000019c78599
+16. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+17. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+18. Poco::PooledThread::run() @ 0x000000001f1707c7
+19. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+20. start_thread @ 0x000000000009caa4
+21. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:29:03,497 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:29:03,503 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:29:03,530 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:29:03,535 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:29:03,575 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:29:03,608 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:29:03,633 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:29:03,663 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:29:03,682 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:29:03,699 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:29:03,724 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:29:03,737 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_prd_part_defect_code
+(
+    `object_rrn` Int64 COMMENT '主键',...
+2026-04-24 15:29:03,762 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ad_user
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+
+    `org...
+2026-04-24 15:29:03,917 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+    `org_...
+2026-04-24 15:29:03,926 - pase_excel_data - ERROR - 执行 SQL 文件失败: Code: 44.
+DB::Exception: Sorting key contains nullable columns, but merge tree setting `allow_nullable_key` is disabled. Stack trace:
+
+0. DB::Exception::Exception(DB::Exception::MessageMasked&&, int, bool) @ 0x0000000013596f1f
+1. DB::Exception::Exception(String&&, int, String, bool) @ 0x000000000ca3f80e
+2. DB::Exception::Exception(PreformattedMessage&&, int) @ 0x000000000ca3f2c0
+3. DB::Exception::Exception<String const&>(int, FormatStringHelperImpl<std::type_identity<String const&>::type>, String const&) @ 0x000000000dcf156b
+4. DB::checkKeyExpression(DB::ExpressionActions const&, DB::Block const&, String const&, bool) @ 0x00000000193ff1a2
+5. DB::MergeTreeData::checkProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, bool, bool, bool, std::shared_ptr<DB::Context const>) const @ 0x00000000193fdcad
+6. DB::MergeTreeData::setProperties(DB::StorageInMemoryMetadata const&, DB::StorageInMemoryMetadata const&, bool, std::shared_ptr<DB::Context const>) @ 0x00000000193f35f8
+7. DB::MergeTreeData::MergeTreeData(DB::StorageID const&, DB::StorageInMemoryMetadata const&, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>, bool, DB::LoadingStrictnessLevel, std::function<void (String const&)>) @ 0x00000000193f0812
+8. DB::StorageMergeTree::StorageMergeTree(DB::StorageID const&, String const&, DB::StorageInMemoryMetadata const&, DB::LoadingStrictnessLevel, std::shared_ptr<DB::Context>, String const&, DB::MergeTreeData::MergingParams const&, std::unique_ptr<DB::MergeTreeSettings, std::default_delete<DB::MergeTreeSettings>>) @ 0x000000001939c3e6
+9. DB::create(DB::StorageFactory::Arguments const&) @ 0x000000001988528d
+10. DB::StorageFactory::get(DB::ASTCreateQuery const&, String const&, std::shared_ptr<DB::Context>, std::shared_ptr<DB::Context>, DB::ColumnsDescription const&, DB::ConstraintsDescription const&, DB::LoadingStrictnessLevel, bool) const @ 0x0000000018c33d7b
+11. DB::InterpreterCreateQuery::doCreateTable(DB::ASTCreateQuery&, DB::InterpreterCreateQuery::TableProperties const&, std::unique_ptr<DB::DDLGuard, std::default_delete<DB::DDLGuard>>&, DB::LoadingStrictnessLevel) @ 0x00000000180dccb5
+12. DB::InterpreterCreateQuery::createTable(DB::ASTCreateQuery&) @ 0x00000000180d1476
+13. DB::InterpreterCreateQuery::execute() @ 0x00000000180e55b8
+14. DB::executeQueryImpl(char const*, char const*, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum, std::unique_ptr<DB::ReadBuffer, std::default_delete<DB::ReadBuffer>>&, std::shared_ptr<DB::IAST>&, std::shared_ptr<DB::ImplicitTransactionControlExecutor>) @ 0x00000000185759e0
+15. DB::executeQuery(String const&, std::shared_ptr<DB::Context>, DB::QueryFlags, DB::QueryProcessingStage::Enum) @ 0x000000001856dc4b
+16. DB::TCPHandler::runImpl() @ 0x0000000019c56510
+17. DB::TCPHandler::run() @ 0x0000000019c78599
+18. Poco::Net::TCPServerConnection::start() @ 0x000000001f1a9cc7
+19. Poco::Net::TCPServerDispatcher::run() @ 0x000000001f1aa159
+20. Poco::PooledThread::run() @ 0x000000001f1707c7
+21. Poco::ThreadImpl::runnableEntry(void*) @ 0x000000001f16ebc1
+22. start_thread @ 0x000000000009caa4
+23. __clone3 @ 0x0000000000129c6c
+
+2026-04-24 15:31:57,812 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:31:57,816 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:31:57,845 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:31:57,863 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:31:58,238 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:31:58,276 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:31:58,317 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:31:58,354 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:31:58,370 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:31:58,382 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:31:58,426 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:31:58,440 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_prd_part_defect_code
+(
+    `object_rrn` Int64 COMMENT '主键',...
+2026-04-24 15:31:58,453 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ad_user
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+
+    `org...
+2026-04-24 15:31:58,491 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+    `org_...
+2026-04-24 15:31:58,534 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dim_calendar
+(
+    `factory`               Nullable(String) COMMENT...
+2026-04-24 15:31:58,561 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_scrap_his
+(
+    `date_key`                 String COMMENT...
+2026-04-24 15:31:58,584 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_wo
+(
+    `object_rrn`                Int64 COMMENT '对象序...
+2026-04-24 15:31:58,611 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a3g70_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:31:58,644 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a4710_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:31:58,678 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.imp_yield_grade
+(
+    `grade_id`     Decimal(38, 0) COMMENT 'Oracle...
+2026-04-24 15:31:58,678 - pase_excel_data - INFO - 开始解析 Excel 文件
+2026-04-24 15:31:58,683 - pase_excel_data - INFO - Excel 文件解析完成
+2026-04-24 15:31:58,683 - pase_excel_data - INFO - 开始加载 SQL 文件数据
+2026-04-24 15:31:58,684 - pase_excel_data - INFO - 加载 SQL 文件: data10_ods_mes_wip_lot.sql
+2026-04-24 15:31:58,684 - pase_excel_data - INFO - 加载 SQL 文件: data11_dim_calendar.sql
+2026-04-24 15:31:58,684 - pase_excel_data - INFO - 加载 SQL 文件: data12_DWD_PANEL_SCRAP_HIS.sql
+2026-04-24 15:31:58,684 - pase_excel_data - INFO - 加载 SQL 文件: data13_ods_mes_wip_wo.sql
+2026-04-24 15:31:58,685 - pase_excel_data - INFO - 加载 SQL 文件: data14_dwd_panel_a3G70_defect.sql
+2026-04-24 15:31:58,686 - pase_excel_data - INFO - 加载 SQL 文件: data15_dwd_panel_a4710_defect.sql
+2026-04-24 15:31:58,686 - pase_excel_data - INFO - 加载 SQL 文件: data16_imp_yield_grade.sql
+2026-04-24 15:31:58,686 - pase_excel_data - INFO - 加载 SQL 文件: data1_ODS_MES_MM_MATERIAL.sql
+2026-04-24 15:31:58,687 - pase_excel_data - INFO - 加载 SQL 文件: data2_ODS_MES_WF_PROCESS_FLOW_NODE.sql
+2026-04-24 15:31:58,687 - pase_excel_data - INFO - 加载 SQL 文件: data3_ODS_MES_WF_STEP.sql
+2026-04-24 15:31:58,687 - pase_excel_data - INFO - 加载 SQL 文件: data4_ODS_MES_CT_INCOMING_CHECK.sql
+2026-04-24 15:31:58,688 - pase_excel_data - INFO - 加载 SQL 文件: data5_ods_mes_wip_future_action.sql
+2026-04-24 15:31:58,688 - pase_excel_data - INFO - 加载 SQL 文件: data6_ODS_MES_WIP_LOT_HLD.sql
+2026-04-24 15:31:58,688 - pase_excel_data - INFO - 加载 SQL 文件: data7_dwd_panel_inout_his.sql
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - 加载 SQL 文件: data8_ods_mes_prd_part_defect_code.sql
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - 加载 SQL 文件: data9_ods_mes_ad_user.sql
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - SQL 文件数据加载完成
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - 开始比对数据
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - 比对表: ods_mes_mm_material
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - Excel 数据行数: 3
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件的“ODS_MES_MM_MATERIAL”这个sheet的第193到203行
+--其中193行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换成clickhous...
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - 比对表: ods_mes_wf_process_flow_node
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - Excel 数据行数: 2
+2026-04-24 15:31:58,690 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件
+-- 的“ODS_MES_WF_PROCESS_FLOW_NODE”这个sheet的第60到70行
+--其中60行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换...
+2026-04-24 15:31:58,691 - pase_excel_data - INFO - 数据比对完成
+2026-04-24 15:31:58,691 - pase_excel_data - INFO - 开始补全空字段
+2026-04-24 15:31:58,698 - pase_excel_data - INFO - 补全表 ods_mes_mm_material 的空字段
+2026-04-24 15:31:58,699 - pase_excel_data - INFO - 补全表 ods_mes_wf_process_flow_node 的空字段
+2026-04-24 15:31:58,699 - pase_excel_data - INFO - 空字段补全完成
+2026-04-24 15:31:58,699 - pase_excel_data - INFO - 开始写入 ClickHouse
+2026-04-24 15:31:58,715 - pase_excel_data - INFO - 成功写入表 ods_mes_mm_material，共 3 条数据
+2026-04-24 15:31:58,725 - pase_excel_data - INFO - 成功写入表 ods_mes_wf_process_flow_node，共 2 条数据
+2026-04-24 15:31:58,725 - pase_excel_data - INFO - 数据写入完成
+2026-04-24 15:31:58,725 - pase_excel_data - INFO - 数据处理流程完成
+2026-04-24 15:40:14,762 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:40:14,878 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:40:14,890 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:40:14,897 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:40:14,925 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:40:14,938 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:40:14,977 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:40:15,011 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:40:15,058 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:40:15,094 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:40:15,105 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:40:15,148 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_prd_part_defect_code
+(
+    `object_rrn` Int64 COMMENT '主键',...
+2026-04-24 15:40:15,175 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ad_user
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+
+    `org...
+2026-04-24 15:40:15,209 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+    `org_...
+2026-04-24 15:40:15,220 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dim_calendar
+(
+    `factory`               Nullable(String) COMMENT...
+2026-04-24 15:40:15,233 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_scrap_his
+(
+    `date_key`                 String COMMENT...
+2026-04-24 15:40:15,262 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_wo
+(
+    `object_rrn`                Int64 COMMENT '对象序...
+2026-04-24 15:40:15,296 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a3g70_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:40:15,331 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a4710_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:40:15,362 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.imp_yield_grade
+(
+    `grade_id`     Decimal(38, 0) COMMENT 'Oracle...
+2026-04-24 15:40:15,362 - pase_excel_data - INFO - 开始解析 Excel 文件
+2026-04-24 15:40:15,364 - pase_excel_data - INFO - Excel 文件解析完成
+2026-04-24 15:40:15,365 - pase_excel_data - INFO - 开始加载 SQL 文件数据
+2026-04-24 15:40:15,367 - pase_excel_data - INFO - 加载 SQL 文件: data10_ods_mes_wip_lot.sql
+2026-04-24 15:40:15,372 - pase_excel_data - INFO - 加载 SQL 文件: data11_dim_calendar.sql
+2026-04-24 15:40:15,374 - pase_excel_data - INFO - 加载 SQL 文件: data12_DWD_PANEL_SCRAP_HIS.sql
+2026-04-24 15:40:15,386 - pase_excel_data - INFO - 加载 SQL 文件: data13_ods_mes_wip_wo.sql
+2026-04-24 15:40:15,387 - pase_excel_data - INFO - 加载 SQL 文件: data14_dwd_panel_a3G70_defect.sql
+2026-04-24 15:40:15,388 - pase_excel_data - INFO - 加载 SQL 文件: data15_dwd_panel_a4710_defect.sql
+2026-04-24 15:40:15,389 - pase_excel_data - INFO - 加载 SQL 文件: data16_imp_yield_grade.sql
+2026-04-24 15:40:15,390 - pase_excel_data - INFO - 加载 SQL 文件: data1_ODS_MES_MM_MATERIAL.sql
+2026-04-24 15:40:15,391 - pase_excel_data - INFO - 加载 SQL 文件: data2_ODS_MES_WF_PROCESS_FLOW_NODE.sql
+2026-04-24 15:40:15,392 - pase_excel_data - INFO - 加载 SQL 文件: data3_ODS_MES_WF_STEP.sql
+2026-04-24 15:40:15,392 - pase_excel_data - INFO - 加载 SQL 文件: data4_ODS_MES_CT_INCOMING_CHECK.sql
+2026-04-24 15:40:15,393 - pase_excel_data - INFO - 加载 SQL 文件: data5_ods_mes_wip_future_action.sql
+2026-04-24 15:40:15,393 - pase_excel_data - INFO - 加载 SQL 文件: data6_ODS_MES_WIP_LOT_HLD.sql
+2026-04-24 15:40:15,394 - pase_excel_data - INFO - 加载 SQL 文件: data7_dwd_panel_inout_his.sql
+2026-04-24 15:40:15,394 - pase_excel_data - INFO - 加载 SQL 文件: data8_ods_mes_prd_part_defect_code.sql
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - 加载 SQL 文件: data9_ods_mes_ad_user.sql
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - SQL 文件数据加载完成
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - 开始比对数据
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - 比对表: ods_mes_mm_material
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - Excel 数据行数: 3
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件的“ODS_MES_MM_MATERIAL”这个sheet的第193到203行
+--其中193行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换成clickhous...
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - 比对表: ods_mes_wf_process_flow_node
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - Excel 数据行数: 2
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件
+-- 的“ODS_MES_WF_PROCESS_FLOW_NODE”这个sheet的第60到70行
+--其中60行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换...
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - 数据比对完成
+2026-04-24 15:40:15,395 - pase_excel_data - INFO - 开始补全空字段
+2026-04-24 15:40:15,418 - pase_excel_data - INFO - 补全表 ods_mes_mm_material 的空字段
+2026-04-24 15:40:15,421 - pase_excel_data - INFO - 补全表 ods_mes_wf_process_flow_node 的空字段
+2026-04-24 15:40:15,421 - pase_excel_data - INFO - 空字段补全完成
+2026-04-24 15:40:15,421 - pase_excel_data - INFO - 开始写入 ClickHouse
+2026-04-24 15:40:15,447 - pase_excel_data - ERROR - 写入 ClickHouse 失败: Insert data column count does not match column names
+2026-04-24 15:41:12,573 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:41:12,635 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:41:12,642 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:41:12,648 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:41:12,662 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:41:12,698 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:41:12,786 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:41:12,798 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:41:12,832 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:41:12,873 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:41:12,919 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:41:12,976 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_prd_part_defect_code
+(
+    `object_rrn` Int64 COMMENT '主键',...
+2026-04-24 15:41:12,990 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ad_user
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+
+    `org...
+2026-04-24 15:41:13,011 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+    `org_...
+2026-04-24 15:41:13,040 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dim_calendar
+(
+    `factory`               Nullable(String) COMMENT...
+2026-04-24 15:41:13,072 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_scrap_his
+(
+    `date_key`                 String COMMENT...
+2026-04-24 15:41:13,115 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_wo
+(
+    `object_rrn`                Int64 COMMENT '对象序...
+2026-04-24 15:41:13,173 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a3g70_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:41:13,190 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a4710_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:41:13,266 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.imp_yield_grade
+(
+    `grade_id`     Decimal(38, 0) COMMENT 'Oracle...
+2026-04-24 15:41:13,266 - pase_excel_data - INFO - 开始解析 Excel 文件
+2026-04-24 15:41:13,266 - pase_excel_data - INFO - Excel 文件解析完成
+2026-04-24 15:41:13,266 - pase_excel_data - INFO - 开始加载 SQL 文件数据
+2026-04-24 15:41:13,267 - pase_excel_data - INFO - 加载 SQL 文件: data10_ods_mes_wip_lot.sql
+2026-04-24 15:41:13,267 - pase_excel_data - INFO - 加载 SQL 文件: data11_dim_calendar.sql
+2026-04-24 15:41:13,267 - pase_excel_data - INFO - 加载 SQL 文件: data12_DWD_PANEL_SCRAP_HIS.sql
+2026-04-24 15:41:13,268 - pase_excel_data - INFO - 加载 SQL 文件: data13_ods_mes_wip_wo.sql
+2026-04-24 15:41:13,269 - pase_excel_data - INFO - 加载 SQL 文件: data14_dwd_panel_a3G70_defect.sql
+2026-04-24 15:41:13,269 - pase_excel_data - INFO - 加载 SQL 文件: data15_dwd_panel_a4710_defect.sql
+2026-04-24 15:41:13,269 - pase_excel_data - INFO - 加载 SQL 文件: data16_imp_yield_grade.sql
+2026-04-24 15:41:13,270 - pase_excel_data - INFO - 加载 SQL 文件: data1_ODS_MES_MM_MATERIAL.sql
+2026-04-24 15:41:13,270 - pase_excel_data - INFO - 加载 SQL 文件: data2_ODS_MES_WF_PROCESS_FLOW_NODE.sql
+2026-04-24 15:41:13,270 - pase_excel_data - INFO - 加载 SQL 文件: data3_ODS_MES_WF_STEP.sql
+2026-04-24 15:41:13,270 - pase_excel_data - INFO - 加载 SQL 文件: data4_ODS_MES_CT_INCOMING_CHECK.sql
+2026-04-24 15:41:13,271 - pase_excel_data - INFO - 加载 SQL 文件: data5_ods_mes_wip_future_action.sql
+2026-04-24 15:41:13,271 - pase_excel_data - INFO - 加载 SQL 文件: data6_ODS_MES_WIP_LOT_HLD.sql
+2026-04-24 15:41:13,272 - pase_excel_data - INFO - 加载 SQL 文件: data7_dwd_panel_inout_his.sql
+2026-04-24 15:41:13,272 - pase_excel_data - INFO - 加载 SQL 文件: data8_ods_mes_prd_part_defect_code.sql
+2026-04-24 15:41:13,272 - pase_excel_data - INFO - 加载 SQL 文件: data9_ods_mes_ad_user.sql
+2026-04-24 15:41:13,272 - pase_excel_data - INFO - SQL 文件数据加载完成
+2026-04-24 15:41:13,272 - pase_excel_data - INFO - 开始比对数据
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - 比对表: ods_mes_mm_material
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - Excel 数据行数: 3
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件的“ODS_MES_MM_MATERIAL”这个sheet的第193到203行
+--其中193行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换成clickhous...
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - 比对表: ods_mes_wf_process_flow_node
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - Excel 数据行数: 2
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件
+-- 的“ODS_MES_WF_PROCESS_FLOW_NODE”这个sheet的第60到70行
+--其中60行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换...
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - 数据比对完成
+2026-04-24 15:41:13,273 - pase_excel_data - INFO - 开始补全空字段
+2026-04-24 15:41:13,275 - pase_excel_data - INFO - 补全表 ods_mes_mm_material 的空字段
+2026-04-24 15:41:13,276 - pase_excel_data - INFO - 补全表 ods_mes_wf_process_flow_node 的空字段
+2026-04-24 15:41:13,276 - pase_excel_data - INFO - 空字段补全完成
+2026-04-24 15:41:13,276 - pase_excel_data - INFO - 开始写入 ClickHouse
+2026-04-24 15:41:13,277 - pase_excel_data - ERROR - 写入 ClickHouse 失败: Client.insert() got an unexpected keyword argument 'columns'
+2026-04-24 15:42:12,927 - pase_excel_data - INFO - 开始数据处理流程
+2026-04-24 15:42:13,003 - pase_excel_data - INFO - 成功连接到 ClickHouse 数据库
+2026-04-24 15:42:13,007 - pase_excel_data - INFO - 执行 SQL 语句成功: create database if not exists rptdw...
+2026-04-24 15:42:13,013 - pase_excel_data - INFO - 执行 SQL 语句成功: truncate database rptdw...
+2026-04-24 15:42:13,067 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_mm_material
+(
+    object_rrn              Int64 COMMENT '对象...
+2026-04-24 15:42:13,119 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_process_flow_node
+(
+    object_rrn           Int64 COMME...
+2026-04-24 15:42:13,162 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wf_step
+(
+    object_rrn Int64 COMMENT '对象序列号',
+    org_rrn...
+2026-04-24 15:42:13,183 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ct_incoming_check
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:42:13,192 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_future_action
+(
+    object_rrn Int64 COMMENT '对象序列号',
+ ...
+2026-04-24 15:42:13,219 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot_hld
+(
+    object_rrn      Int64 NOT NULL COMMENT '对...
+2026-04-24 15:42:13,246 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_inout_his
+(
+    date_key Nullable(String) COMMENT '日期维度',...
+2026-04-24 15:42:13,265 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_prd_part_defect_code
+(
+    `object_rrn` Int64 COMMENT '主键',...
+2026-04-24 15:42:13,279 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_ad_user
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+
+    `org...
+2026-04-24 15:42:13,309 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_lot
+(
+    `object_rrn` Int64 COMMENT '对象序列号',
+    `org_...
+2026-04-24 15:42:13,332 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dim_calendar
+(
+    `factory`               Nullable(String) COMMENT...
+2026-04-24 15:42:13,373 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_scrap_his
+(
+    `date_key`                 String COMMENT...
+2026-04-24 15:42:13,412 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.ods_mes_wip_wo
+(
+    `object_rrn`                Int64 COMMENT '对象序...
+2026-04-24 15:42:13,455 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a3g70_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:42:13,525 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.dwd_panel_a4710_defect
+(
+    `date_key`          String COMMENT '业务...
+2026-04-24 15:42:13,555 - pase_excel_data - INFO - 执行 SQL 语句成功: CREATE TABLE IF NOT EXISTS rptdw.imp_yield_grade
+(
+    `grade_id`     Decimal(38, 0) COMMENT 'Oracle...
+2026-04-24 15:42:13,555 - pase_excel_data - INFO - 开始解析 Excel 文件
+2026-04-24 15:42:13,555 - pase_excel_data - INFO - Excel 文件解析完成
+2026-04-24 15:42:13,555 - pase_excel_data - INFO - 开始加载 SQL 文件数据
+2026-04-24 15:42:13,556 - pase_excel_data - INFO - 加载 SQL 文件: data10_ods_mes_wip_lot.sql
+2026-04-24 15:42:13,557 - pase_excel_data - INFO - 加载 SQL 文件: data11_dim_calendar.sql
+2026-04-24 15:42:13,557 - pase_excel_data - INFO - 加载 SQL 文件: data12_DWD_PANEL_SCRAP_HIS.sql
+2026-04-24 15:42:13,558 - pase_excel_data - INFO - 加载 SQL 文件: data13_ods_mes_wip_wo.sql
+2026-04-24 15:42:13,558 - pase_excel_data - INFO - 加载 SQL 文件: data14_dwd_panel_a3G70_defect.sql
+2026-04-24 15:42:13,558 - pase_excel_data - INFO - 加载 SQL 文件: data15_dwd_panel_a4710_defect.sql
+2026-04-24 15:42:13,558 - pase_excel_data - INFO - 加载 SQL 文件: data16_imp_yield_grade.sql
+2026-04-24 15:42:13,559 - pase_excel_data - INFO - 加载 SQL 文件: data1_ODS_MES_MM_MATERIAL.sql
+2026-04-24 15:42:13,559 - pase_excel_data - INFO - 加载 SQL 文件: data2_ODS_MES_WF_PROCESS_FLOW_NODE.sql
+2026-04-24 15:42:13,560 - pase_excel_data - INFO - 加载 SQL 文件: data3_ODS_MES_WF_STEP.sql
+2026-04-24 15:42:13,560 - pase_excel_data - INFO - 加载 SQL 文件: data4_ODS_MES_CT_INCOMING_CHECK.sql
+2026-04-24 15:42:13,561 - pase_excel_data - INFO - 加载 SQL 文件: data5_ods_mes_wip_future_action.sql
+2026-04-24 15:42:13,561 - pase_excel_data - INFO - 加载 SQL 文件: data6_ODS_MES_WIP_LOT_HLD.sql
+2026-04-24 15:42:13,561 - pase_excel_data - INFO - 加载 SQL 文件: data7_dwd_panel_inout_his.sql
+2026-04-24 15:42:13,562 - pase_excel_data - INFO - 加载 SQL 文件: data8_ods_mes_prd_part_defect_code.sql
+2026-04-24 15:42:13,562 - pase_excel_data - INFO - 加载 SQL 文件: data9_ods_mes_ad_user.sql
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - SQL 文件数据加载完成
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - 开始比对数据
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - 比对表: ods_mes_mm_material
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - Excel 数据行数: 3
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件的“ODS_MES_MM_MATERIAL”这个sheet的第193到203行
+--其中193行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换成clickhous...
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - 比对表: ods_mes_wf_process_flow_node
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - Excel 数据行数: 2
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - SQL 数据内容: 
+--这张表的数据来自“D:\code\python\pandas_demo\efd\日报涉及表结构与数据样例.xlsx” 这个文件
+-- 的“ODS_MES_WF_PROCESS_FLOW_NODE”这个sheet的第60到70行
+--其中60行是表头，每一列和这个表的每一列一一对应
+
+我需要从Oracle中原封不动的把数据同步到  clickhouse中，把下面这个Oracle的建表语句，转换...
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - 数据比对完成
+2026-04-24 15:42:13,563 - pase_excel_data - INFO - 开始补全空字段
+2026-04-24 15:42:13,566 - pase_excel_data - INFO - 补全表 ods_mes_mm_material 的空字段
+2026-04-24 15:42:13,566 - pase_excel_data - INFO - 补全表 ods_mes_wf_process_flow_node 的空字段
+2026-04-24 15:42:13,566 - pase_excel_data - INFO - 空字段补全完成
+2026-04-24 15:42:13,566 - pase_excel_data - INFO - 开始写入 ClickHouse
+2026-04-24 15:42:13,584 - pase_excel_data - INFO - 成功写入表 ods_mes_mm_material，共 3 条数据
+2026-04-24 15:42:13,609 - pase_excel_data - INFO - 成功写入表 ods_mes_wf_process_flow_node，共 2 条数据
+2026-04-24 15:42:13,609 - pase_excel_data - INFO - 数据写入完成
+2026-04-24 15:42:13,609 - pase_excel_data - INFO - 数据处理流程完成
