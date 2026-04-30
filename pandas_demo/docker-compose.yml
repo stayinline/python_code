@@ -1,0 +1,192 @@
+version: "3.9"
+
+# ============================================================
+# pandas_demo 完整开发栈
+# 包含：Python 应用 + PostgreSQL + ClickHouse + Kafka + Weaviate
+# ============================================================
+
+services:
+
+  # ----------------------------------------------------------
+  # Python 应用（JupyterLab + 所有脚本）
+  # ----------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pandas_demo_app
+    ports:
+      - "8888:8888"   # JupyterLab
+    volumes:
+      - .:/app                                          # 挂载源码，热更新
+      - hf_cache:/app/huggingface_cache                 # HuggingFace 模型缓存持久化
+    env_file:
+      - .env
+    environment:
+      # 若使用 docker-compose 内置服务，覆盖 .env 中的地址
+      - PG_TEST_HOST=postgres
+      - PG_TEST_PORT=5432
+      - CK_HOST=clickhouse
+      - CK_PORT=8123
+      - KAFKA_BROKERS=kafka:9092
+      - WEAVIATE_HOST=weaviate
+      - WEAVIATE_PORT=8080
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      postgres:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+      kafka:
+        condition: service_started
+      weaviate:
+        condition: service_started
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+  # ----------------------------------------------------------
+  # PostgreSQL 14
+  # ----------------------------------------------------------
+  postgres:
+    image: postgres:14-alpine
+    container_name: pandas_demo_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: labillion-workflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PG_TEST_PASSWORD:-postgres123}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+  # ----------------------------------------------------------
+  # ClickHouse 24
+  # ----------------------------------------------------------
+  clickhouse:
+    image: clickhouse/clickhouse-server:24-alpine
+    container_name: pandas_demo_clickhouse
+    ports:
+      - "8123:8123"   # HTTP 接口
+      - "9000:9000"   # Native 接口
+    environment:
+      CLICKHOUSE_DB: default
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ${CK_PASSWORD:-}
+    volumes:
+      - ck_data:/var/lib/clickhouse
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8123/ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+  # ----------------------------------------------------------
+  # Zookeeper（Kafka 依赖）
+  # ----------------------------------------------------------
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    container_name: pandas_demo_zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    volumes:
+      - zk_data:/var/lib/zookeeper/data
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+  # ----------------------------------------------------------
+  # Kafka 3.6
+  # ----------------------------------------------------------
+  kafka:
+    image: confluentinc/cp-kafka:7.6.0
+    container_name: pandas_demo_kafka
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    depends_on:
+      - zookeeper
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+  # ----------------------------------------------------------
+  # Weaviate 1.24（向量数据库）
+  # ----------------------------------------------------------
+  weaviate:
+    image: semitechnologies/weaviate:1.24.10
+    container_name: pandas_demo_weaviate
+    ports:
+      - "18080:8080"    # HTTP / REST
+      - "50051:50051"   # gRPC
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: /var/lib/weaviate
+      DEFAULT_VECTORIZER_MODULE: none
+      ENABLE_MODULES: ""
+      CLUSTER_HOSTNAME: weaviate
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+  # ----------------------------------------------------------
+  # Ollama（本地 LLM，可选，体积约 1-2 GB）
+  # 如不需要本地模型，可注释掉此 service
+  # ----------------------------------------------------------
+  ollama:
+    image: ollama/ollama:latest
+    container_name: pandas_demo_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    networks:
+      - demo_net
+
+# ----------------------------------------------------------
+# 持久化存储卷
+# ----------------------------------------------------------
+volumes:
+  pg_data:
+  ck_data:
+  zk_data:
+  kafka_data:
+  weaviate_data:
+  ollama_data:
+  hf_cache:
+
+# ----------------------------------------------------------
+# 内部网络
+# ----------------------------------------------------------
+networks:
+  demo_net:
+    driver: bridge
